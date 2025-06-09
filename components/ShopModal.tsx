@@ -126,7 +126,7 @@ export const ShopModal: React.FC<ShopModalProps> = ({ player, shopItems, isOpen,
                 ))}
               </div>
             ) : (
-              <p className="text-[var(--pixel-text-dim)] italic text-center py-3 flex-grow flex items-center justify-center text-sm">판매 아이템 없음.</p> {/* Increased font size */}
+              <p className="text-[var(--pixel-text-dim)] italic text-center py-3 flex-grow flex items-center justify-center text-sm">판매 아이템 없음.</p>
             )}
           </section>
 
@@ -145,7 +145,7 @@ export const ShopModal: React.FC<ShopModalProps> = ({ player, shopItems, isOpen,
                 ))}
               </div>
             ) : (
-              <p className="text-[var(--pixel-text-dim)] italic text-center py-3 flex-grow flex items-center justify-center text-sm">판매 가능 아이템 없음.</p> {/* Increased font size */}
+              <p className="text-[var(--pixel-text-dim)] italic text-center py-3 flex-grow flex items-center justify-center text-sm">판매 가능 아이템 없음.</p>
             )}
           </section>
         </div>
