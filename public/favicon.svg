@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 배경 -->
+  <rect width="32" height="32" fill="#2f3542"/>
+  
+  <!-- 검 모양 -->
+  <rect x="14" y="5" width="4" height="22" fill="#e0e6f0"/>
+  <rect x="10" y="14" width="12" height="4" fill="#e0e6f0"/>
+  
+  <!-- 검 손잡이 -->
+  <rect x="14" y="18" width="4" height="5" fill="#fbc531"/>
+  
+  <!-- 검 끝 부분 하이라이트 -->
+  <rect x="14" y="5" width="4" height="2" fill="#00a8ff"/>
+  
+  <!-- 픽셀 테두리 효과 -->
+  <rect x="0" y="0" width="32" height="1" fill="#57606f"/>
+  <rect x="0" y="31" width="32" height="1" fill="#57606f"/>
+  <rect x="0" y="0" width="1" height="32" fill="#57606f"/>
+  <rect x="31" y="0" width="1" height="32" fill="#57606f"/>
+</svg> 

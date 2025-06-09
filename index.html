@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>텍스트 기반 JRPG</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --pixel-bg-dark: #23272f; /* Even darker for main background */
+      --pixel-bg-panel: #2f3542; /* Dark panel background */
+      --pixel-border: #57606f;  /* Slightly lighter border */
+      --pixel-text: #e0e6f0;    /* Off-white text - slightly brightened for readability */
+      --pixel-text-dim: #b4bcc8; /* Dimmer text - slightly brightened for readability */
+      --pixel-highlight: #00a8ff; /* Bright cyan highlight */
+      --pixel-accent: #fbc531;   /* Gold accent */
+      --pixel-error: #e84118;    /* Red for errors/hp loss */
+      --pixel-success: #4cd137;  /* Green for success/hp gain */
+      --pixel-mp: #0097e6;       /* Blue for MP */
+      --line-height-readable: 1.7; /* Increased line height for body text */
+      --pixel-button-default-bg: #4A7282; /* Muted teal/blue for default buttons */
+    }
+
+    body {
+      font-family: 'VT323', monospace; /* Changed default font for readability */
+      background-color: var(--pixel-bg-dark);
+      color: var(--pixel-text);
+      overscroll-behavior: none;
+      image-rendering: pixelated; /* Crisper edges for pixel art if any images were used */
+      line-height: var(--line-height-readable); /* Default readable line height */
+    }
+    
+    .font-pixel-header {
+      font-family: 'Press Start 2P', cursive; /* For main titles and specific headers */
+    }
+
+    /* Custom scrollbar for a more "pixel UI" feel */
+    ::-webkit-scrollbar {
+      width: 14px; /* Slightly wider */
+      height: 14px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--pixel-bg-dark);
+      border: 1px solid var(--pixel-border);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--pixel-border);
+      border: 2px solid var(--pixel-bg-panel); /* Thicker border for better visibility */
+    }
+    /* ::-webkit-scrollbar-thumb:hover removed */
+
+    .pixel-panel {
+      background-color: var(--pixel-bg-panel);
+      border: 2px solid var(--pixel-border);
+      padding: 0.85rem; /* Increased padding */
+      box-shadow: 4px 4px 0px 0px var(--pixel-bg-dark); /* Hard shadow for depth */
+    }
+
+    .pixel-panel-inset {
+      background-color: var(--pixel-bg-dark);
+      border: 2px inset var(--pixel-border);
+      padding: 0.85rem; /* Increased padding */
+    }
+    
+    .pixel-header {
+      font-family: 'Press Start 2P', cursive;
+      color: var(--pixel-highlight);
+      font-size: 1.1em; 
+      margin-bottom: 0.6rem; /* Increased margin */
+      padding-bottom: 0.35rem; /* Increased padding */
+      border-bottom: 2px solid var(--pixel-border);
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .pixel-button {
+      font-family: 'Press Start 2P', cursive; /* Buttons use Press Start 2P */
+      background-color: var(--pixel-button-default-bg); /* Changed from --pixel-border */
+      color: var(--pixel-text);
+      border: 2px solid var(--pixel-bg-dark);
+      padding: 0.6rem 0.85rem; /* Increased padding */
+      text-align: center;
+      font-size: 0.8em;
+      cursor: pointer;
+      box-shadow: 2px 2px 0px 0px var(--pixel-bg-dark);
+      transition: transform 0.1s; /* Kept transition for active state */
+      line-height: 1.2;
+    }
+    /* .pixel-button:hover removed */
+    .pixel-button:active {
+      background-color: var(--pixel-accent);
+      color: var(--pixel-bg-dark);
+      transform: translate(2px, 2px);
+      box-shadow: none;
+    }
+    .pixel-button:disabled {
+      background-color: #444;
+      color: #888;
+      cursor: not-allowed;
+      box-shadow: none;
+      border-color: #333;
+    }
+    
+    .pixel-button-primary {
+        background-color: var(--pixel-highlight);
+        color: var(--pixel-bg-dark);
+        border-color: var(--pixel-bg-dark);
+    }
+    /* .pixel-button-primary:hover removed */
+
+    .pixel-button-danger {
+        background-color: var(--pixel-error);
+        color: var(--pixel-text);
+        border-color: var(--pixel-bg-dark);
+    }
+    /* .pixel-button-danger:hover removed */
+    
+    .pixel-button-success {
+        background-color: var(--pixel-success);
+        color: var(--pixel-bg-dark);
+        border-color: var(--pixel-bg-dark);
+    }
+    /* .pixel-button-success:hover removed */
+
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.85); /* Slightly darker overlay */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+      padding: 1rem;
+    }
+    .modal-content {
+      background-color: var(--pixel-bg-panel);
+      padding: 1.75rem; /* Increased padding */
+      border: 3px solid var(--pixel-border);
+      box-shadow: 6px 6px 0px 0px var(--pixel-bg-dark);
+      max-width: 90vw;
+      max-height: 90vh;
+      overflow-y: auto;
+      width: auto; /* Fit content */
+    }
+    
+    /* Text styles for game log */
+    .log-narration { color: var(--pixel-text-dim); font-style: italic; }
+    .log-dialogue { color: var(--pixel-text); } /* Main dialogue text */
+    .log-dialogue-speaker { font-family: 'Press Start 2P', cursive; font-weight: normal; color: var(--pixel-accent); font-size: 0.9em; } /* Speaker distinct color */
+    .log-event { color: var(--pixel-highlight); }
+    .log-reward { color: var(--pixel-success); font-weight: bold; }
+    .log-error { color: var(--pixel-error); font-weight: bold; }
+    .log-location { color: #b388ff; /* Lighter Purple for location */ font-weight: bold; font-family: 'Press Start 2P', cursive; font-size: 0.9em;}
+    .log-system { color: var(--pixel-border); font-size: 0.9em; } /* System messages slightly larger */
+    .log-combat { color: #ff8f70; /* Lighter Orange for combat */ font-family: 'Press Start 2P', cursive; font-size:0.9em; }
+    .log-combat_action { color: #ffad99; /* Lighter Orange for combat action */ }
+    .log-combat_result { color: #ff8f70; font-weight: bold; }
+
+    .pixel-input {
+      background-color: var(--pixel-bg-dark);
+      border: 2px solid var(--pixel-border);
+      color: var(--pixel-text);
+      padding: 0.4rem 0.6rem; /* Slightly increased padding */
+      font-family: 'VT323', monospace; /* Inputs use VT323 */
+      font-size: 0.9em; /* Slightly larger */
+    }
+    .pixel-input:focus {
+      outline: none;
+      border-color: var(--pixel-highlight);
+    }
+    
+    .text-xxs { /* Keeping for very small utility text if needed, but aiming for larger generally */
+        font-size: 0.75rem; /* ~12px if base is 16px. Original was 0.6rem */
+        line-height: 1rem;  /* Original was 0.8rem */
+    }
+    .text-xs { /* Smallest readable text */
+        font-size: 0.875rem; /* ~14px */
+        line-height: 1.25rem;
+    }
+    .text-sm { /* Default body text size */
+        font-size: 1rem;    /* ~16px */
+        line-height: 1.5rem;
+    }
+
+    /* Minimap Styles */
+    .minimap-svg {
+      width: 100%;
+      height: 100%;
+      background-color: var(--pixel-bg-dark);
+      border: 1px solid var(--pixel-border);
+      user-select: none; /* Prevent text selection during drag */
+    }
+    .minimap-svg.cursor-grab { cursor: grab; }
+    .minimap-svg.cursor-grabbing { cursor: grabbing; }
+
+    .minimap-edge {
+      stroke: var(--pixel-border);
+      /* stroke-width: 2px; dynamically set by scale */
+    }
+    .minimap-node-rect {
+      /* stroke: var(--pixel-accent); dynamically set by type/state */
+      /* stroke-width: 2px; dynamically set by scale */
+      fill: var(--pixel-bg-panel);
+      rx: 0; /* Sharp corners */
+      ry: 0;
+    }
+    .minimap-node-text {
+      fill: var(--pixel-text-dim);
+      /* font-size: 13px; dynamically set by scale */
+      font-family: 'VT323', monospace;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      pointer-events: none; /* Allow hover on rect */
+      user-select: none;
+    }
+    .minimap-node-rect.visited-node {
+      fill: var(--pixel-button-default-bg); /* Muted teal/blue for visited */
+      /* stroke: var(--pixel-highlight); dynamically set */
+    }
+    .minimap-node-rect.current-node {
+      fill: var(--pixel-highlight);
+      /* stroke: var(--pixel-text); dynamically set */
+      /* stroke-width: 3px; dynamically set by scale */
+    }
+    .minimap-node-text.current-node {
+      fill: var(--pixel-bg-dark);
+      font-weight: bold;
+    }
+    .minimap-node:hover .minimap-node-rect { /* Simple hover for non-transformed view, might be less effective with zoom/pan */
+      /* stroke-width: 3px; dynamically set by scale */
+      /* stroke: var(--pixel-accent); */ /* Consider removing if it interferes with dynamic stroke or is not visible enough with zoom */
+    }
+    .minimap-node:hover .minimap-node-text {
+      /* fill: var(--pixel-accent); */ /* Consider removing if not visible enough with zoom */
+    }
+
+    .minimap-controls {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      z-index: 10;
+    }
+    .minimap-control-button {
+      font-family: 'Press Start 2P', cursive;
+      background-color: var(--pixel-bg-panel);
+      color: var(--pixel-text);
+      border: 2px solid var(--pixel-border);
+      width: 32px;
+      height: 32px;
+      font-size: 14px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 1px 1px 0px 0px var(--pixel-bg-dark);
+    }
+    .minimap-control-button:active {
+      background-color: var(--pixel-accent);
+      color: var(--pixel-bg-dark);
+      transform: translate(1px, 1px);
+      box-shadow: none;
+    }
+
+
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.4.0",
+    "recharts": "https://esm.sh/recharts@^2.15.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="text-sm"> <!-- Default to text-sm (1rem VT323) -->
+  <div id="root" class="h-screen flex flex-col antialiased"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
