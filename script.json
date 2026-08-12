@@ -1,0 +1,3816 @@
+{
+  "worldSettings": {
+    "title": "잊혀진 영역의 연대기",
+    "description": "고대의 던전을 탐험하며 잃어버린 마법 유물을 찾아 어둠의 세력에 맞서는 모험가들의 이야기",
+    "mainConflict": "",
+    "keyLocations": ""
+  },
+  "stages": [
+    {
+      "id": "qjgidbojz",
+      "title": "고대 유적의 속삭임",
+      "settingDescription": "오래된 소문이 떠도는 고대 유적을 탐험하며, 유적 깊숙한 곳에 숨겨진 비밀과 어둠의 힘에 맞서는 첫 번째 여정입니다.",
+      "characters": [
+        {
+          "id": "pb2ed99zy",
+          "name": "모험가",
+          "type": "플레이어 캐릭터",
+          "description": "잊혀진 마법 유물을 찾아 모험을 떠나는 용감한 탐험가.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "ubo24b6nb",
+          "name": "촌장 엘라라",
+          "type": "NPC",
+          "description": "고대 유적 근처 '햇살 마을'의 현명한 촌장. 유적의 위험성을 경고하고 도움을 요청한다.",
+          "dialogueSeed": "유적에 대한 경고, 사라진 마을 사람들에 대한 걱정, 유물 탐색 의뢰."
+        },
+        {
+          "id": "kxuhph3m6",
+          "name": "상인 칼",
+          "type": "NPC",
+          "description": "'햇살 마을'에서 여관 겸 잡화점을 운영하는 친근한 상인. 모험가에게 필요한 물품을 판매한다.",
+          "dialogueSeed": "물약 및 장비 판매, 유적에 대한 마을의 소문."
+        },
+        {
+          "id": "tn16fbshj",
+          "name": "고블린 정찰병",
+          "type": "일반 몬스터",
+          "description": "고대 유적 주변을 약탈하고 배회하는 약삭빠른 고블린.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "g1mmdk20g",
+          "name": "해골 전사",
+          "type": "일반 몬스터",
+          "description": "고대 유적의 마법으로 되살아난 언데드 전사. 강력한 물리 공격을 가한다.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "u3xep8ook",
+          "name": "어둠의 의식 사제",
+          "type": "일반 몬스터",
+          "description": "유적 깊은 곳에서 어둠의 힘을 연구하고 의식을 행하는 자. 마법 공격에 능하다.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "m4bbfud9l",
+          "name": "유적의 수호자, 크락스",
+          "type": "보스 몬스터",
+          "description": "고대 유적의 심층부를 지키는 거대한 괴물. 유적의 어둠의 힘을 사용하여 공격한다.",
+          "dialogueSeed": null
+        }
+      ],
+      "scenes": [
+        {
+          "id": "e441yje9e",
+          "stageId": "qjgidbojz",
+          "title": "스테이지 시작",
+          "type": "나레이션",
+          "content": "오래된 지도에 표시된 '잊혀진 영역'의 초입, 작은 마을 근처에 도착했습니다. 마을 사람들은 최근 인근의 고대 유적에서 들려오는 기이한 소리와 사라지는 사람들에 대해 속삭이고 있습니다. 당신은 잃어버린 유물을 찾기 위해 이 위험한 땅에 발을 들였습니다.",
+          "characterIds": [],
+          "nextSceneId": "jvz4nii9m"
+        },
+        {
+          "id": "jvz4nii9m",
+          "stageId": "qjgidbojz",
+          "title": "햇살 마을 도착",
+          "type": "마을",
+          "content": "작지만 평화로워 보이는 '햇살 마을'에 도착했습니다. 따뜻한 햇살 아래 사람들이 분주하게 움직이고 있습니다. 마을 중앙에는 여관과 잡화점 역할을 겸하는 건물이 보입니다.",
+          "characterIds": [],
+          "nextSceneId": "nucab8wck"
+        },
+        {
+          "id": "nucab8wck",
+          "stageId": "qjgidbojz",
+          "title": "촌장 엘라라와의 대화",
+          "type": "대화",
+          "content": "마을 촌장으로 보이는 나이든 여성이 당신에게 다가옵니다. 그녀의 얼굴에는 근심이 가득합니다.",
+          "characterIds": [
+            "ubo24b6nb"
+          ],
+          "nextSceneId": "h8jjxte8m"
+        },
+        {
+          "id": "h8jjxte8m",
+          "stageId": "qjgidbojz",
+          "title": "유적 탐사 결정",
+          "type": "선택",
+          "content": "촌장 엘라라는 고대 유적에서 벌어지는 불길한 일들과 사라진 마을 사람들에 대해 이야기하며, 유적을 조사하고 안전을 확보해달라고 부탁합니다. 이 제안을 수락하시겠습니까?",
+          "characterIds": [],
+          "choices": [
+            {
+              "id": "mhqnvprwk",
+              "text": "촌장의 부탁을 수락한다.",
+              "nextSceneId": "6ejzl4i7x"
+            },
+            {
+              "id": "04nc69bbk",
+              "text": "촌장에게 거절 의사를 전달한다.",
+              "nextSceneId": "sz5e2c5v3"
+            }
+          ]
+        },
+        {
+          "id": "sz5e2c5v3",
+          "stageId": "qjgidbojz",
+          "title": "촌장 설득 시도",
+          "type": "대화",
+          "content": "당신이 거절 의사를 밝히자, 촌장 엘라라는 간절한 눈빛으로 마을의 위기를 다시 한번 설명합니다.",
+          "characterIds": [
+            "ubo24b6nb"
+          ],
+          "nextSceneId": "6ejzl4i7x"
+        },
+        {
+          "id": "6ejzl4i7x",
+          "stageId": "qjgidbojz",
+          "title": "상인 칼과의 대화",
+          "type": "대화",
+          "content": "마을의 잡화점에서 상인 칼을 만났습니다. 그는 유적에 대한 소문을 들었는지 약간 불안해 보이지만, 모험가에게 필요한 물품을 판매할 준비가 되어 있습니다.",
+          "characterIds": [
+            "kxuhph3m6"
+          ],
+          "nextSceneId": "vkhm8pioa"
+        },
+        {
+          "id": "vkhm8pioa",
+          "stageId": "qjgidbojz",
+          "title": "유적 입구로 이동",
+          "type": "장소 변경",
+          "content": "햇살 마을을 뒤로하고 촌장이 알려준 방향으로 고대 유적을 향해 걸어갑니다. 울창한 숲길을 지나자 낡고 거대한 석조 구조물이 시야에 들어옵니다.",
+          "characterIds": [],
+          "nextSceneId": "lwbirz7ze",
+          "newLocationName": "고대 유적 입구"
+        },
+        {
+          "id": "lwbirz7ze",
+          "stageId": "qjgidbojz",
+          "title": "고대 유적 발견",
+          "type": "나레이션",
+          "content": "오랜 세월의 풍파를 견딘 거대한 석조 아치형 입구가 나타났습니다. 입구 주변에는 잡초가 무성하고, 불길한 기운이 감돌고 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "bl177zrml"
+        },
+        {
+          "id": "bl177zrml",
+          "stageId": "qjgidbojz",
+          "title": "첫 조우: 고블린 정찰병",
+          "type": "일반 전투",
+          "content": "유적 입구를 조사하려는 순간, 매복하고 있던 고블린 무리가 당신을 발견하고 달려듭니다!",
+          "characterIds": [],
+          "nextSceneId": "lqxcagl3m",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "tn16fbshj",
+              "tn16fbshj",
+              "tn16fbshj"
+            ],
+            "reward": "소량의 골드와 기본 소모품"
+          }
+        },
+        {
+          "id": "lqxcagl3m",
+          "stageId": "qjgidbojz",
+          "title": "유적 외부 회랑 진입",
+          "type": "장소 변경",
+          "content": "고블린들을 물리치고 유적 내부로 들어섰습니다. 어둡고 습한 석조 회랑이 미로처럼 이어집니다.",
+          "characterIds": [],
+          "nextSceneId": "pqtl27v1j",
+          "newLocationName": "유적 외부 회랑"
+        },
+        {
+          "id": "pqtl27v1j",
+          "stageId": "qjgidbojz",
+          "title": "회랑 탐험 시작",
+          "type": "나레이션",
+          "content": "회랑의 벽면에는 알아볼 수 없는 고대 문양들이 새겨져 있습니다. 공기는 차갑고 정적만이 감돌지만, 어딘가에서 희미한 소리가 들려오는 듯합니다.",
+          "characterIds": [],
+          "nextSceneId": "5tsdnntc6"
+        },
+        {
+          "id": "5tsdnntc6",
+          "stageId": "qjgidbojz",
+          "title": "언데드 조우: 해골 전사",
+          "type": "일반 전투",
+          "content": "회랑을 따라 걷던 중, 갑자기 뼈들이 삐걱이는 소리와 함께 해골 전사들이 나타나 당신을 가로막습니다!",
+          "characterIds": [],
+          "nextSceneId": "ckxa7htp6",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "g1mmdk20g",
+              "g1mmdk20g"
+            ],
+            "reward": "소량의 경험치와 낡은 장비"
+          }
+        },
+        {
+          "id": "ckxa7htp6",
+          "stageId": "qjgidbojz",
+          "title": "숨겨진 함정 발동",
+          "type": "나레이션",
+          "content": "회랑의 바닥을 지나던 중, 발 밑에서 '철컥'하는 소리와 함께 숨겨진 함정이 발동됩니다! 날카로운 화살이 발사되거나, 바닥이 꺼질 위험에 처했습니다.",
+          "characterIds": [],
+          "nextSceneId": "kbiz9p890"
+        },
+        {
+          "id": "kbiz9p890",
+          "stageId": "qjgidbojz",
+          "title": "함정 돌파 시도",
+          "type": "선택",
+          "content": "발동된 함정을 어떻게 처리하시겠습니까?",
+          "characterIds": [],
+          "choices": [
+            {
+              "id": "vgr0e2u5y",
+              "text": "순발력을 발휘하여 함정을 회피한다.",
+              "nextSceneId": "mu0bs558p"
+            },
+            {
+              "id": "a0cfc05rz",
+              "text": "방패나 무기로 함정을 정면 돌파한다.",
+              "nextSceneId": "ruj9pi3gc"
+            }
+          ]
+        },
+        {
+          "id": "ruj9pi3gc",
+          "stageId": "qjgidbojz",
+          "title": "함정 피해 발생",
+          "type": "나레이션",
+          "content": "함정을 정면으로 돌파하려 했지만 실패했습니다. 함정의 공격에 약간의 피해를 입었습니다. (체력 감소)",
+          "characterIds": [],
+          "nextSceneId": "mu0bs558p"
+        },
+        {
+          "id": "mu0bs558p",
+          "stageId": "qjgidbojz",
+          "title": "유적 내부 전실 진입",
+          "type": "장소 변경",
+          "content": "함정을 통과하거나 회피하고 유적의 더 깊은 곳으로 이어지는 넓은 전실에 도착했습니다.",
+          "characterIds": [],
+          "nextSceneId": "5ognbt7mj",
+          "newLocationName": "유적 내부 전실"
+        },
+        {
+          "id": "5ognbt7mj",
+          "stageId": "qjgidbojz",
+          "title": "어둠의 의식 현장",
+          "type": "나레이션",
+          "content": "전실 중앙에는 기이한 문양으로 둘러싸인 제단이 있습니다. 제단 위에는 알 수 없는 상징물이 놓여 있고, 주변에서는 희미하게 어둠의 에너지가 느껴집니다. 누군가 어둠의 의식을 진행하려 했던 흔적입니다.",
+          "characterIds": [],
+          "nextSceneId": "vnp1eq2bc"
+        },
+        {
+          "id": "vnp1eq2bc",
+          "stageId": "qjgidbojz",
+          "title": "사악한 의식 저지",
+          "type": "일반 전투",
+          "content": "제단 근처에 있던 어둠의 의식 사제와 그의 졸개들이 당신을 발견하고 공격해옵니다! 이들이 의식을 완료하기 전에 저지해야 합니다.",
+          "characterIds": [],
+          "nextSceneId": "s06swqytn",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "u3xep8ook",
+              "g1mmdk20g"
+            ],
+            "reward": "약간의 경험치와 마법 재료"
+          }
+        },
+        {
+          "id": "s06swqytn",
+          "stageId": "qjgidbojz",
+          "title": "고대 열쇠 획득",
+          "type": "아이템 획득",
+          "content": "어둠의 사제를 물리치자, 제단 옆에 놓여 있던 낡은 금속 열쇠가 눈에 들어옵니다. 유적 깊은 곳으로 가는 문을 여는 데 필요할 것 같습니다.",
+          "characterIds": [],
+          "nextSceneId": "7mv9snpqn",
+          "item": "고대 열쇠"
+        },
+        {
+          "id": "7mv9snpqn",
+          "stageId": "qjgidbojz",
+          "title": "잠겨 있는 심층부 문 발견",
+          "type": "나레이션",
+          "content": "전실 구석에는 거대한 석조 문이 있습니다. 문에는 복잡한 자물쇠가 달려 있으며, 방금 획득한 '고대 열쇠'와 모양이 일치하는 것 같습니다.",
+          "characterIds": [],
+          "nextSceneId": "da84z1jim"
+        },
+        {
+          "id": "da84z1jim",
+          "stageId": "qjgidbojz",
+          "title": "심층부 문 열기",
+          "type": "나레이션",
+          "content": "'고대 열쇠'를 사용하여 석조 문의 자물쇠를 엽니다. 거대한 문이 천천히 안쪽으로 열리며 어둡고 깊은 통로가 드러납니다. 안쪽에서 차갑고 무거운 기운이 뿜어져 나옵니다.",
+          "characterIds": [],
+          "nextSceneId": "2yz5o2c8j"
+        },
+        {
+          "id": "2yz5o2c8j",
+          "stageId": "qjgidbojz",
+          "title": "유적 심층부 진입",
+          "type": "장소 변경",
+          "content": "열린 문을 통해 유적의 심층부로 발을 들여놓습니다. 공기가 더욱 차가워지고, 알 수 없는 고대 언어가 희미하게 들려오는 듯합니다.",
+          "characterIds": [],
+          "nextSceneId": "glmdt3zvc",
+          "newLocationName": "유적 심층부"
+        },
+        {
+          "id": "glmdt3zvc",
+          "stageId": "qjgidbojz",
+          "title": "수호자의 기운 감지",
+          "type": "나레이션",
+          "content": "심층부 통로를 따라가자 넓은 공간이 나타납니다. 이 공간에서 강력하고 압도적인 어둠의 기운이 느껴집니다. 유적의 비밀을 지키는 존재가 있음을 직감합니다.",
+          "characterIds": [],
+          "nextSceneId": "rjoui9jk2"
+        },
+        {
+          "id": "rjoui9jk2",
+          "stageId": "qjgidbojz",
+          "title": "결전의 방 앞",
+          "type": "나레이션",
+          "content": "기운이 가장 강하게 느껴지는 곳에 다다랐습니다. 거대한 석조 문이 앞을 가로막고 있습니다. 이 문 너머에 유적의 수호자가 있을 것입니다. 마지막 전투를 준비합니다.",
+          "characterIds": [],
+          "nextSceneId": "r8rn3urf5"
+        },
+        {
+          "id": "r8rn3urf5",
+          "stageId": "qjgidbojz",
+          "title": "유적의 수호자, 크락스",
+          "type": "보스 전투",
+          "content": "문을 열고 들어서자, 거대한 몸집의 괴물이 당신을 노려봅니다. 이 유적의 수호자, 크락스입니다! 그는 어둠의 힘을 사용하여 당신을 막으려 합니다. 유적의 비밀을 밝히기 위해, 이 수호자를 쓰러뜨려야 합니다!",
+          "characterIds": [],
+          "nextSceneId": null,
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "m4bbfud9l"
+            ],
+            "reward": "다량의 경험치, 희귀한 마법 유물 조각, 유적 심층부 진입 권한"
+          }
+        }
+      ]
+    },
+    {
+      "id": "0x8yipng6",
+      "title": "저주받은 숲의 성소",
+      "settingDescription": "고대 유적에서 얻은 단서를 따라, 어둠의 마법으로 뒤틀린 저주받은 숲을 지나 숨겨진 고대 성소를 찾아야 합니다. 성소 깊은 곳에는 잃어버린 유물에 대한 중요한 비밀이 잠들어 있습니다.",
+      "characters": [
+        {
+          "id": "1knoz3kt7",
+          "name": "은둔자 엘라라",
+          "type": "NPC",
+          "description": "저주받은 숲 근처에 홀로 사는 현명한 노파. 숲의 역사와 위험에 대해 알고 있습니다.",
+          "dialogueSeed": "숲은 예전 같지 않아요. 어둠이 그곳을 집어삼키려 하죠. 조심해야 할 겁니다."
+        },
+        {
+          "id": "dricee9v2",
+          "name": "촌장 아론",
+          "type": "NPC",
+          "description": "저주받은 숲 근처의 작은 마을 '안식처'의 촌장. 마을을 지키기 위해 노력합니다.",
+          "dialogueSeed": "우리 마을은 숲의 보호를 받으며 살아왔지만, 요즘 숲이 병들고 있습니다. 대체 무슨 일이 일어나고 있는 걸까요?"
+        },
+        {
+          "id": "pfnr0p1hi",
+          "name": "타락한 숲 늑대",
+          "type": "일반 몬스터",
+          "description": "어둠의 마법에 오염되어 사납게 변한 숲의 늑대."
+        },
+        {
+          "id": "x9g5l8k4k",
+          "name": "그림자 정령",
+          "type": "일반 몬스터",
+          "description": "숲의 어둠 속에서 태어난 마력 덩어리. 물리적 공격이 잘 통하지 않습니다."
+        },
+        {
+          "id": "t5isu1gm5",
+          "name": "뒤틀린 나무 정령",
+          "type": "일반 몬스터",
+          "description": "저주받은 마법에 의해 고통스럽게 변이된 나무 정령. 강력한 근접 공격을 사용합니다."
+        },
+        {
+          "id": "qb64tpg2g",
+          "name": "성소 수호 골렘",
+          "type": "일반 몬스터",
+          "description": "고대 성소를 지키기 위해 만들어진 마력 깃든 골렘. 단단한 육체와 강력한 일격을 가합니다."
+        },
+        {
+          "id": "rdjvyawr7",
+          "name": "유령 기사단",
+          "type": "일반 몬스터",
+          "description": "성소에 잠든 고대 영혼들이 어둠에 물들어 깨어난 존재들. 과거의 기술로 공격합니다."
+        },
+        {
+          "id": "m6vqiy6vf",
+          "name": "숲을 지키는 고대 존재",
+          "type": "보스 몬스터",
+          "description": "저주받은 숲과 고대 성소의 균형을 지키던 존재. 침입자를 막기 위해 강력한 자연 마법과 물리력을 사용합니다.",
+          "dialogueSeed": "침입자여, 이 신성한 곳을 더럽히지 마라! 너희의 발길은 어둠을 불러올 뿐이다!"
+        }
+      ],
+      "scenes": [
+        {
+          "id": "qbr5c5e0p",
+          "stageId": "0x8yipng6",
+          "title": "저주받은 숲 입구",
+          "type": "나레이션",
+          "content": "고대 유적에서 얻은 단서는 당신을 짙은 어둠과 기이한 침묵이 감도는 숲 입구로 이끌었습니다. 이곳이 '저주받은 숲'이라 불리는 곳입니다.",
+          "characterIds": [],
+          "nextSceneId": "viljfh960"
+        },
+        {
+          "id": "viljfh960",
+          "stageId": "0x8yipng6",
+          "title": "은둔자와의 만남",
+          "type": "대화",
+          "content": "숲 입구 근처 작은 오두막에서 은둔자 엘라라를 만났습니다. 그녀는 숲의 위험성에 대해 경고합니다.",
+          "characterIds": [
+            "1knoz3kt7"
+          ],
+          "nextSceneId": "oxvtugbag"
+        },
+        {
+          "id": "oxvtugbag",
+          "stageId": "0x8yipng6",
+          "title": "숲으로 가는 길 선택",
+          "type": "선택",
+          "content": "엘라라는 숲으로 들어가는 두 가지 길을 알려줍니다. '오래된 오솔길'은 위험하지만 빠르고, '돌아가는 우회로'는 안전하지만 시간이 더 걸립니다.",
+          "characterIds": [],
+          "choices": [
+            {
+              "id": "h4353bs5f",
+              "text": "오래된 오솔길로 간다.",
+              "nextSceneId": "945nier6n"
+            },
+            {
+              "id": "32l0hfet7",
+              "text": "돌아가는 우회로로 간다.",
+              "nextSceneId": null
+            }
+          ]
+        },
+        {
+          "id": "945nier6n",
+          "stageId": "0x8yipng6",
+          "title": "오래된 오솔길",
+          "type": "장소 변경",
+          "content": "가시덤불과 뒤엉킨 나뭇가지로 뒤덮인 오래된 오솔길로 들어섰습니다. 숲의 기운이 더욱 무겁게 느껴집니다.",
+          "characterIds": [],
+          "nextSceneId": "8uxe9px49",
+          "newLocationName": "저주받은 숲 (오솔길)"
+        },
+        {
+          "id": "8uxe9px49",
+          "stageId": "0x8yipng6",
+          "title": "오솔길의 첫 조우",
+          "type": "일반 전투",
+          "content": "오솔길을 따라가던 중, 어둠에 물든 숲 늑대 무리가 당신을 습격합니다.",
+          "characterIds": [],
+          "nextSceneId": "t1zmaggki",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "pfnr0p1hi",
+              "pfnr0p1hi",
+              "pfnr0p1hi"
+            ],
+            "reward": "오염된 늑대 가죽, 경험치"
+          }
+        },
+        {
+          "id": "t1zmaggki",
+          "stageId": "0x8yipng6",
+          "title": "숲의 깊은 곳으로",
+          "type": "나레이션",
+          "content": "늑대들을 물리치고 오솔길을 계속 나아갑니다. 숲은 점점 더 짙고 어두워지며, 기괴한 소리가 들려옵니다.",
+          "characterIds": [],
+          "nextSceneId": "76oloe59o"
+        },
+        {
+          "id": "76oloe59o",
+          "stageId": "0x8yipng6",
+          "title": "기이한 식물 발견",
+          "type": "아이템 획득",
+          "content": "길가에서 어둠의 마력이 강하게 느껴지는 기이한 식물을 발견했습니다. 분석하면 저주의 근원을 파악하는 데 도움이 될지도 모릅니다.",
+          "characterIds": [],
+          "nextSceneId": "lf7nkzitd",
+          "item": "마력에 오염된 식물 샘플"
+        },
+        {
+          "id": "lf7nkzitd",
+          "stageId": "0x8yipng6",
+          "title": "어둠 속의 습격",
+          "type": "일반 전투",
+          "content": "식물을 조사하던 중, 주위의 그림자가 움직이더니 그림자 정령들이 나타나 공격합니다.",
+          "characterIds": [],
+          "nextSceneId": "m0zb5ziup",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "x9g5l8k4k",
+              "x9g5l8k4k"
+            ],
+            "reward": "정령의 핵, 경험치"
+          }
+        },
+        {
+          "id": "m0zb5ziup",
+          "stageId": "0x8yipng6",
+          "title": "숨겨진 마을의 기척",
+          "type": "나레이션",
+          "content": "숲을 헤치고 나아가던 중, 희미하게 인공적인 불빛과 사람의 온기가 느껴지는 곳을 발견했습니다.",
+          "characterIds": [],
+          "nextSceneId": "f1rblb3tn"
+        },
+        {
+          "id": "f1rblb3tn",
+          "stageId": "0x8yipng6",
+          "title": "안식처 입구",
+          "type": "장소 변경",
+          "content": "놀랍게도 저주받은 숲 한가운데에 작은 마을이 존재합니다. 마을 이름은 '안식처'입니다.",
+          "characterIds": [],
+          "nextSceneId": "kphvlbpc8",
+          "newLocationName": "안식처"
+        },
+        {
+          "id": "kphvlbpc8",
+          "stageId": "0x8yipng6",
+          "title": "안식처",
+          "type": "마을",
+          "content": "안식처는 숲의 위험 속에서도 평화를 유지하고 있는 작은 마을입니다. 이곳에서 휴식을 취하고 필요한 물품을 보충할 수 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "bzsahlk7j"
+        },
+        {
+          "id": "bzsahlk7j",
+          "stageId": "0x8yipng6",
+          "title": "촌장과의 대화",
+          "type": "대화",
+          "content": "마을 촌장 아론은 당신에게 숲의 저주가 시작된 시기와 성소에 대한 단편적인 정보를 알려줍니다.",
+          "characterIds": [
+            "dricee9v2"
+          ],
+          "nextSceneId": "p2fi76hcm"
+        },
+        {
+          "id": "p2fi76hcm",
+          "stageId": "0x8yipng6",
+          "title": "안식처를 떠나 성소로",
+          "type": "장소 변경",
+          "content": "안식처에서 재정비를 마치고, 촌장이 알려준 방향으로 고대 성소를 찾아 숲의 더 깊은 곳으로 향합니다.",
+          "characterIds": [],
+          "nextSceneId": "ch5i37mxx",
+          "newLocationName": "저주받은 숲 (깊은 곳)"
+        },
+        {
+          "id": "ch5i37mxx",
+          "stageId": "0x8yipng6",
+          "title": "저주의 심화",
+          "type": "나레이션",
+          "content": "숲의 깊은 곳으로 갈수록 저주의 기운은 더욱 강해집니다. 나무들은 뒤틀리고 땅은 생기를 잃었습니다.",
+          "characterIds": [],
+          "nextSceneId": "ya3ic28bj"
+        },
+        {
+          "id": "ya3ic28bj",
+          "stageId": "0x8yipng6",
+          "title": "뒤틀린 나무의 공격",
+          "type": "일반 전투",
+          "content": "숲의 마력에 심하게 오염된 나무 정령이 길을 막아서며 공격해옵니다.",
+          "characterIds": [],
+          "nextSceneId": "g2qyxz5mp",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "t5isu1gm5"
+            ],
+            "reward": "오염된 나무 조각, 경험치"
+          }
+        },
+        {
+          "id": "g2qyxz5mp",
+          "stageId": "0x8yipng6",
+          "title": "고대 성소의 흔적",
+          "type": "나레이션",
+          "content": "마침내 숲의 가장 깊은 곳에서 거대한 바위와 덩굴에 뒤덮인 고대 건축물의 흔적을 발견했습니다. 고대 성소입니다.",
+          "characterIds": [],
+          "nextSceneId": "0k1x7pzg8"
+        },
+        {
+          "id": "0k1x7pzg8",
+          "stageId": "0x8yipng6",
+          "title": "고대 성소 입구",
+          "type": "장소 변경",
+          "content": "오랜 세월 잊혔던 고대 성소의 입구가 당신 앞에 모습을 드러냅니다. 어둠 속에서 기이한 기운이 흘러나옵니다.",
+          "characterIds": [],
+          "nextSceneId": "nw1yc1sia",
+          "newLocationName": "고대 성소 유적"
+        },
+        {
+          "id": "nw1yc1sia",
+          "stageId": "0x8yipng6",
+          "title": "성소 내부 탐색",
+          "type": "나레이션",
+          "content": "성소 내부로 들어서자 차갑고 습한 공기가 느껴집니다. 복잡한 구조의 복도와 방들이 이어집니다.",
+          "characterIds": [],
+          "nextSceneId": "1dywkiluf"
+        },
+        {
+          "id": "1dywkiluf",
+          "stageId": "0x8yipng6",
+          "title": "성소의 첫 수호자",
+          "type": "일반 전투",
+          "content": "성소 깊숙한 곳으로 가려 하자, 입구를 지키던 성소 수호 골렘이 깨어나 공격합니다.",
+          "characterIds": [],
+          "nextSceneId": "kzg9pg81v",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "qb64tpg2g"
+            ],
+            "reward": "단단한 암석 조각, 경험치"
+          }
+        },
+        {
+          "id": "kzg9pg81v",
+          "stageId": "0x8yipng6",
+          "title": "성소의 비밀",
+          "type": "나레이션",
+          "content": "골렘을 물리치고 성소 내부를 더 탐색합니다. 벽에는 오래된 문양과 그림들이 새겨져 있습니다. 성소의 역사와 잃어버린 유물에 대한 단서가 보입니다.",
+          "characterIds": [],
+          "nextSceneId": "ikzu3x9bs"
+        },
+        {
+          "id": "ikzu3x9bs",
+          "stageId": "0x8yipng6",
+          "title": "고대 문양 조각 발견",
+          "type": "아이템 획득",
+          "content": "벽에 새겨진 문양 중 특이한 조각 하나가 떨어져 나왔습니다. 유물에 대한 중요한 정보가 담겨 있을 것 같습니다.",
+          "characterIds": [],
+          "nextSceneId": "8w782yvws",
+          "item": "고대 성소 문양 조각"
+        },
+        {
+          "id": "8w782yvws",
+          "stageId": "0x8yipng6",
+          "title": "되살아난 수호자들",
+          "type": "일반 전투",
+          "content": "성소의 기운이 당신의 존재를 감지했는지, 잠들어 있던 유령 기사단이 나타나 길을 막습니다.",
+          "characterIds": [],
+          "nextSceneId": "ciobcav1k",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "rdjvyawr7",
+              "rdjvyawr7"
+            ],
+            "reward": "희미한 영혼 조각, 경험치"
+          }
+        },
+        {
+          "id": "ciobcav1k",
+          "stageId": "0x8yipng6",
+          "title": "성소의 핵심부",
+          "type": "나레이션",
+          "content": "수많은 시련을 뚫고 마침내 성소의 가장 깊숙한 곳에 도달했습니다. 거대한 공간 중앙에 강한 마력이 느껴지는 무언가가 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "bpvtpz8kh"
+        },
+        {
+          "id": "bpvtpz8kh",
+          "stageId": "0x8yipng6",
+          "title": "고대 존재의 경고",
+          "type": "나레이션",
+          "content": "공간 중앙에 있던 존재가 깨어납니다. 그는 숲과 성소를 지키는 고대 존재이며, 당신이 유물을 가져가는 것을 막으려 합니다.",
+          "characterIds": [],
+          "nextSceneId": "swkisbuy4"
+        },
+        {
+          "id": "swkisbuy4",
+          "stageId": "0x8yipng6",
+          "title": "숲을 지키는 고대 존재",
+          "type": "보스 전투",
+          "content": "고대 존재가 거대한 힘을 해방하며 당신에게 맞섭니다. 이곳의 균형을 되찾기 위해, 혹은 유물을 얻기 위해 그를 쓰러뜨려야 합니다.",
+          "characterIds": [],
+          "nextSceneId": null,
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "m6vqiy6vf"
+            ],
+            "reward": "고대 존재의 핵, 잃어버린 유물의 조각, 대량 경험치"
+          }
+        }
+      ]
+    },
+    {
+      "id": "1q91umzxv",
+      "title": "그림자 봉우리의 광산",
+      "settingDescription": "험준한 서리바람 산맥 깊숙한 곳에 숨겨진 고대 광산. 어둠의 세력이 이곳을 점거하고 잃어버린 유물을 찾고 있다.",
+      "characters": [
+        {
+          "id": "d93ob609u",
+          "name": "플레이어 캐릭터",
+          "type": "플레이어 캐릭터",
+          "description": "고대의 유물을 찾아 모험하는 용감한 탐험가.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "77ssn317w",
+          "name": "산악 괴수",
+          "type": "일반 몬스터",
+          "description": "서리바람 산맥에 서식하는 거칠고 강력한 야수.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "v8m47y6wt",
+          "name": "어둠의 척후병",
+          "type": "일반 몬스터",
+          "description": "어둠의 세력 소속 정찰병. 산맥 곳곳을 감시한다.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "iv0p0x90r",
+          "name": "산 속 은둔자",
+          "type": "NPC",
+          "description": "산맥에 오래 살아온 현명한 노인. 이 지역에 대한 깊은 지식을 가지고 있다.",
+          "dialogueSeed": "이 산은 위험해... 특히 저 광산 쪽은... 어둠의 기운이 가득하네."
+        },
+        {
+          "id": "bniif9wt5",
+          "name": "광산 좀비",
+          "type": "일반 몬스터",
+          "description": "광산 사고나 어둠 마법으로 되살아난 시체. 갱도를 배회한다.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "tjaj1t443",
+          "name": "어둠 광부",
+          "type": "일반 몬스터",
+          "description": "어둠의 세력에 의해 타락하여 광산을 파헤치는 광부들.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "gkfq7xcd2",
+          "name": "마을 지도자",
+          "type": "NPC",
+          "description": "지하 은신처 마을을 이끄는 리더. 어둠의 세력으로부터 마을을 지키려 한다.",
+          "dialogueSeed": "우리는 숨어 지내고 있소... 저 위 광산에서 내려오는 그림자들 때문에 불안한 나날을 보내고 있지."
+        },
+        {
+          "id": "2273se929",
+          "name": "상인",
+          "type": "NPC",
+          "description": "지하 마을에서 모험가들에게 필요한 물건을 파는 상인.",
+          "dialogueSeed": "필요한 게 있나? 이 외딴 곳까지 온 걸 보면 쉽지 않은 여정이었겠군."
+        },
+        {
+          "id": "h9yabri6w",
+          "name": "대장장이",
+          "type": "NPC",
+          "description": "지하 마을의 대장장이. 장비를 수리하거나 강화할 수 있다.",
+          "dialogueSeed": "장비는 잘 정비해 둬야 하네. 특히 저 아래로 내려갈 생각이라면 말이지."
+        },
+        {
+          "id": "e1gth2lmm",
+          "name": "심연의 수호자",
+          "type": "일반 몬스터",
+          "description": "광산 심층부의 특정 구역을 지키는 강력한 마물.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "gx20r0uru",
+          "name": "그림자 지배자",
+          "type": "보스 몬스터",
+          "description": "이 광산을 점거하고 유물을 찾는 어둠의 세력 간부. 강력한 어둠 마법을 사용한다.",
+          "dialogueSeed": null
+        }
+      ],
+      "scenes": [
+        {
+          "id": "1g2ujf6id",
+          "stageId": "1q91umzxv",
+          "title": "이전 여정의 끝과 새로운 시작",
+          "type": "나레이션",
+          "content": "저주받은 숲의 성소에서 얻은 단서는 잊혀진 유물의 다음 행방이 서리바람 산맥 깊숙한 곳에 있음을 가리켰다. 험준한 산맥을 넘어 새로운 위험에 맞설 때가 왔다.",
+          "characterIds": [],
+          "nextSceneId": "oul3e6cvo"
+        },
+        {
+          "id": "oul3e6cvo",
+          "stageId": "1q91umzxv",
+          "title": "서리바람 산맥 입구",
+          "type": "장소 변경",
+          "content": "매서운 바람과 눈보라가 몰아치는 서리바람 산맥의 입구에 도착했다. 앞으로 나아가기 위해서는 이 혹독한 환경을 극복해야 한다.",
+          "characterIds": [],
+          "nextSceneId": "ox8v50tke",
+          "newLocationName": "서리바람 산맥 입구"
+        },
+        {
+          "id": "ox8v50tke",
+          "stageId": "1q91umzxv",
+          "title": "험준한 산길",
+          "type": "나레이션",
+          "content": "깎아지른 절벽과 미끄러운 빙판길이 이어진다. 한 걸음 한 걸음 내딛는 것이 고되고 위험하다.",
+          "characterIds": [],
+          "nextSceneId": "0gbs9nppz"
+        },
+        {
+          "id": "0gbs9nppz",
+          "stageId": "1q91umzxv",
+          "title": "산악 괴수 조우",
+          "type": "일반 전투",
+          "content": "산맥의 혹독한 환경에 적응한 거대한 괴수가 나타나 길을 막는다.",
+          "characterIds": [],
+          "nextSceneId": "tsb3hzsyg",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "77ssn317w"
+            ],
+            "reward": "산악 괴수의 발톱, 경험치"
+          }
+        },
+        {
+          "id": "tsb3hzsyg",
+          "stageId": "1q91umzxv",
+          "title": "깊어지는 산 속",
+          "type": "나레이션",
+          "content": "산맥 깊숙이 들어갈수록 기온은 더욱 낮아지고, 어딘가에서 불길한 기운이 느껴진다.",
+          "characterIds": [],
+          "nextSceneId": "2x018i6tc"
+        },
+        {
+          "id": "2x018i6tc",
+          "stageId": "1q91umzxv",
+          "title": "어둠의 척후병",
+          "type": "일반 전투",
+          "content": "산길을 따라 어둠의 세력 소속 정찰병들이 배치되어 있다. 들키지 않고 지나가거나 처치해야 한다.",
+          "characterIds": [],
+          "nextSceneId": "2l2q7uhn1",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "v8m47y6wt"
+            ],
+            "reward": "어둠의 척후병의 증표, 경험치"
+          }
+        },
+        {
+          "id": "2l2q7uhn1",
+          "stageId": "1q91umzxv",
+          "title": "산 속 은둔자",
+          "type": "대화",
+          "content": "눈보라 속 작은 동굴에서 연기가 피어오른다. 그 안에는 산 속 은둔자가 있다.",
+          "characterIds": [
+            "iv0p0x90r"
+          ],
+          "nextSceneId": "w0apxbfy3"
+        },
+        {
+          "id": "w0apxbfy3",
+          "stageId": "1q91umzxv",
+          "title": "은둔자의 조언을 따라",
+          "type": "나레이션",
+          "content": "은둔자는 산맥 깊숙한 곳에 숨겨진 고대 광산과 그곳을 점거한 어둠의 세력에 대해 경고하며, 광산으로 향하는 길을 알려주었다.",
+          "characterIds": [],
+          "nextSceneId": "r2gpn2d6d"
+        },
+        {
+          "id": "r2gpn2d6d",
+          "stageId": "1q91umzxv",
+          "title": "숨겨진 입구 발견",
+          "type": "나레이션",
+          "content": "은둔자의 조언대로 산맥의 특정 지점을 탐색하자, 눈과 바위에 가려진 거대한 동굴 입구가 드러났다. 희미한 어둠의 기운이 새어 나온다.",
+          "characterIds": [],
+          "nextSceneId": "v6bn4pcik"
+        },
+        {
+          "id": "v6bn4pcik",
+          "stageId": "1q91umzxv",
+          "title": "그림자 광산 1층",
+          "type": "장소 변경",
+          "content": "동굴 입구는 고대 광산으로 이어져 있다. 낡은 갱도에서는 습하고 차가운 공기가 느껴지며, 부서진 채굴 장비들이 널려 있다.",
+          "characterIds": [],
+          "nextSceneId": "9rq9swbx3",
+          "newLocationName": "그림자 광산 1층"
+        },
+        {
+          "id": "9rq9swbx3",
+          "stageId": "1q91umzxv",
+          "title": "낡고 위험한 갱도",
+          "type": "나레이션",
+          "content": "광산 내부는 언제 무너질지 모르는 듯 위태롭다. 발소리를 죽이며 조심스럽게 나아가야 한다.",
+          "characterIds": [],
+          "nextSceneId": "ub4zerawf"
+        },
+        {
+          "id": "ub4zerawf",
+          "stageId": "1q91umzxv",
+          "title": "광산 좀비와 조우",
+          "type": "일반 전투",
+          "content": "어둠의 기운 때문인지, 광산에서 사고로 죽은 듯한 시체들이 되살아나 공격해온다.",
+          "characterIds": [],
+          "nextSceneId": "5u7qmg9rp",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "bniif9wt5"
+            ],
+            "reward": "썩은 살점, 경험치"
+          }
+        },
+        {
+          "id": "5u7qmg9rp",
+          "stageId": "1q91umzxv",
+          "title": "광산 내부 탐색",
+          "type": "나레이션",
+          "content": "갈림길이 나타나고, 낡은 수레와 채굴 도구들이 방치되어 있다. 어둠의 세력이 이곳을 점거한 지 꽤 된 것 같다.",
+          "characterIds": [],
+          "nextSceneId": "xp1rrfsro"
+        },
+        {
+          "id": "xp1rrfsro",
+          "stageId": "1q91umzxv",
+          "title": "어둠 광부",
+          "type": "일반 전투",
+          "content": "정신을 지배당한 광부들이 곡괭이를 휘두르며 달려든다. 그들의 눈은 광기로 번뜩인다.",
+          "characterIds": [],
+          "nextSceneId": "a7x5b7zzw",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "tjaj1t443"
+            ],
+            "reward": "녹슨 곡괭이, 경험치"
+          }
+        },
+        {
+          "id": "a7x5b7zzw",
+          "stageId": "1q91umzxv",
+          "title": "예상치 못한 발견",
+          "type": "나레이션",
+          "content": "광산 깊숙한 곳에서 희미한 빛과 사람들의 소리가 들려온다. 이곳에 다른 생존자들이 있을 줄이야.",
+          "characterIds": [],
+          "nextSceneId": "0iurw0f88"
+        },
+        {
+          "id": "0iurw0f88",
+          "stageId": "1q91umzxv",
+          "title": "지하 은신처 입구",
+          "type": "장소 변경",
+          "content": "좁은 통로를 지나자 넓은 공동이 나타나고, 그곳에 작은 마을이 형성되어 있다. 광산을 피해 숨어 사는 사람들의 은신처다.",
+          "characterIds": [],
+          "nextSceneId": "3mjrhpi54",
+          "newLocationName": "지하 은신처 입구"
+        },
+        {
+          "id": "3mjrhpi54",
+          "stageId": "1q91umzxv",
+          "title": "광산 속 마을",
+          "type": "마을",
+          "content": "광산 내부에 숨겨진 작은 마을. 이곳에서 재정비하고 정보를 얻을 수 있다.",
+          "characterIds": [],
+          "nextSceneId": "27a4ayn00"
+        },
+        {
+          "id": "27a4ayn00",
+          "stageId": "1q91umzxv",
+          "title": "마을 지도자",
+          "type": "대화",
+          "content": "마을 지도자는 어둠의 세력이 광산을 점거한 이후의 참상과 그들이 무언가를 찾고 있음을 이야기해준다.",
+          "characterIds": [
+            "gkfq7xcd2"
+          ],
+          "nextSceneId": "zz9hpfbx1"
+        },
+        {
+          "id": "zz9hpfbx1",
+          "stageId": "1q91umzxv",
+          "title": "상인",
+          "type": "대화",
+          "content": "여행에 필요한 물품을 상인에게서 구매할 수 있다.",
+          "characterIds": [
+            "2273se929"
+          ],
+          "nextSceneId": "n7qdhb5g0"
+        },
+        {
+          "id": "n7qdhb5g0",
+          "stageId": "1q91umzxv",
+          "title": "대장장이",
+          "type": "대화",
+          "content": "대장장이에게 장비를 수리하거나 강화할 수 있다.",
+          "characterIds": [
+            "h9yabri6w"
+          ],
+          "nextSceneId": "tteyr4vjw"
+        },
+        {
+          "id": "tteyr4vjw",
+          "stageId": "1q91umzxv",
+          "title": "광산 심층부로 향하는 길",
+          "type": "장소 변경",
+          "content": "마을에서 정보를 얻고 재정비를 마쳤다. 이제 어둠의 세력의 근원이 있는 광산 심층부로 내려갈 때다.",
+          "characterIds": [],
+          "nextSceneId": "a2li27gj7",
+          "newLocationName": "광산 심층부 입구"
+        },
+        {
+          "id": "a2li27gj7",
+          "stageId": "1q91umzxv",
+          "title": "더욱 깊은 어둠 속으로",
+          "type": "나레이션",
+          "content": "광산 심층부는 더욱 어둡고 위험하다. 알 수 없는 소리가 울려 퍼지고, 어둠의 기운이 더욱 강하게 느껴진다.",
+          "characterIds": [],
+          "nextSceneId": "7lmiw8zi3"
+        },
+        {
+          "id": "7lmiw8zi3",
+          "stageId": "1q91umzxv",
+          "title": "심연의 수호자",
+          "type": "일반 전투",
+          "content": "광산의 깊은 곳을 지키는 강력한 마물과 마주쳤다. 이들을 쓰러뜨려야만 앞으로 나아갈 수 있다.",
+          "characterIds": [],
+          "nextSceneId": "cc9wu8edq",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "e1gth2lmm"
+            ],
+            "reward": "수호자의 핵, 경험치"
+          }
+        },
+        {
+          "id": "cc9wu8edq",
+          "stageId": "1q91umzxv",
+          "title": "고대 유물의 흔적",
+          "type": "나레이션",
+          "content": "오래된 채굴 장비와 함께 고대 문양이 새겨진 돌기둥이 발견된다. 어둠의 세력이 찾고 있는 유물과 관련된 것 같다.",
+          "characterIds": [],
+          "nextSceneId": "8hzxyjxpy"
+        },
+        {
+          "id": "8hzxyjxpy",
+          "stageId": "1q91umzxv",
+          "title": "잃어버린 조각",
+          "type": "아이템 획득",
+          "content": "고대 돌기둥 근처에서 잃어버린 유물의 조각으로 보이는 물체를 발견했다. 강력한 마력이 느껴진다.",
+          "characterIds": [],
+          "nextSceneId": "i8lecfrjh",
+          "item": "잃어버린 유물의 조각"
+        },
+        {
+          "id": "i8lecfrjh",
+          "stageId": "1q91umzxv",
+          "title": "강력한 기운의 근원",
+          "type": "나레이션",
+          "content": "유물의 조각을 발견한 곳에서 더욱 강렬한 어둠의 기운이 흘러나온다. 이 기운의 근원이 바로 어둠의 세력 간부가 있는 곳일 것이다.",
+          "characterIds": [],
+          "nextSceneId": "zw6ev63b1"
+        },
+        {
+          "id": "zw6ev63b1",
+          "stageId": "1q91umzxv",
+          "title": "지배자의 처소 입구",
+          "type": "장소 변경",
+          "content": "가장 깊숙한 갱도의 끝에 거대한 철문이 나타났다. 문 너머에서 불길한 기운이 새어 나온다.",
+          "characterIds": [],
+          "nextSceneId": "ah90h7s83",
+          "newLocationName": "지배자의 처소 입구"
+        },
+        {
+          "id": "ah90h7s83",
+          "stageId": "1q91umzxv",
+          "title": "최종 결전의 장소",
+          "type": "나레이션",
+          "content": "문을 열고 들어서자 넓은 동굴이 나타난다. 그 중심에는 어둠의 기운을 내뿜는 존재가 서 있다. 이곳이 모든 것의 끝이다.",
+          "characterIds": [],
+          "nextSceneId": "5ykd8s0da"
+        },
+        {
+          "id": "5ykd8s0da",
+          "stageId": "1q91umzxv",
+          "title": "그림자 지배자",
+          "type": "보스 전투",
+          "content": "어둠의 세력 간부, 그림자 지배자가 앞을 막아선다. 잃어버린 유물을 두고 최후의 전투가 시작된다!",
+          "characterIds": [],
+          "nextSceneId": null,
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "gx20r0uru"
+            ],
+            "reward": "그림자 지배자의 핵, 희귀 마법 아이템, 경험치"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rrg5wcc0w",
+      "title": "심연에 잠긴 도시",
+      "settingDescription": "고대 문명의 찬란함이 물 밑으로 가라앉은 폐허. 어둠의 세력이 이곳의 힘을 차지하기 위해 깊은 심연을 헤집고 있습니다.",
+      "characters": [
+        {
+          "id": "5idjz1iub",
+          "name": "플레이어 캐릭터",
+          "type": "플레이어 캐릭터",
+          "description": "잊혀진 유물을 찾아 어둠에 맞서는 모험가.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "72o02mx07",
+          "name": "수문장 골렘",
+          "type": "일반 몬스터",
+          "description": "고대 도시의 입구를 지키던 마법 골렘. 오랜 시간 물속에 잠겨 이끼가 끼어있다.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "ryw7665t6",
+          "name": "타락한 도시민",
+          "type": "일반 몬스터",
+          "description": "도시에 남아있던 자들이 어둠의 기운에 오염되어 변이된 형태. 지성을 잃고 배회한다.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "iec6unuis",
+          "name": "수중 정원사",
+          "type": "일반 몬스터",
+          "description": "수중 정원을 가꾸던 존재가 변이된 형태. 물과 식물 마법을 사용한다.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "qdc7vjhr7",
+          "name": "어둠의 전령",
+          "type": "일반 몬스터",
+          "description": "어둠의 세력이 도시에 파견한 하수인. 마법과 전투 기술을 사용한다.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "8c4k3seue",
+          "name": "기록 보관소 수호자",
+          "type": "일반 몬스터",
+          "description": "고대 기록 보관소를 지키는 마법 구조체. 침입자를 강력한 마법으로 공격한다.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "zwir7pslr",
+          "name": "엘라라",
+          "type": "NPC",
+          "description": "심연 마을의 촌장. 도시에 대해 많은 것을 알고 있으며, 생존자들을 이끌고 있다.",
+          "dialogueSeed": "도시의 역사, 어둠의 세력, 심연의 지배자에 대한 정보 제공."
+        },
+        {
+          "id": "vptt9sh73",
+          "name": "심연의 지배자 크라켄",
+          "type": "보스 몬스터",
+          "description": "심연에 잠긴 도시의 핵이자 유물을 지배하려는 거대한 존재. 강력한 촉수와 마법 공격을 사용한다.",
+          "dialogueSeed": null
+        }
+      ],
+      "scenes": [
+        {
+          "id": "k30xdo8d2",
+          "stageId": "rrg5wcc0w",
+          "title": "심연의 경계 도착",
+          "type": "나레이션",
+          "content": "험준한 해안 절벽 아래, 깊고 어두운 바다가 펼쳐져 있습니다. 전해지는 소문에 따르면, 이 심연 아래 고대 도시가 잠들어 있다고 합니다. 잃어버린 유물이 그곳에 있다는 단서를 따라 이곳까지 왔습니다.",
+          "characterIds": [],
+          "nextSceneId": "vc9jyfazr"
+        },
+        {
+          "id": "vc9jyfazr",
+          "stageId": "rrg5wcc0w",
+          "title": "도시 입구 탐색",
+          "type": "나레이션",
+          "content": "도시로 향하는 길을 찾아야 합니다. 절벽을 따라 내려가거나, 해안선을 수색해야 할 것 같습니다.",
+          "characterIds": [],
+          "nextSceneId": "l0yzn3nsx"
+        },
+        {
+          "id": "l0yzn3nsx",
+          "stageId": "rrg5wcc0w",
+          "title": "첫 번째 수문",
+          "type": "일반 전투",
+          "content": "바위 절벽 사이에 거대한 고대 수문이 나타났습니다. 수문 앞에는 도시의 입구를 지키는 듯한 마법 골렘이 서 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "c6m1jzx66",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "72o02mx07"
+            ],
+            "reward": "고대 골렘의 핵 조각, 경험치"
+          }
+        },
+        {
+          "id": "c6m1jzx66",
+          "stageId": "rrg5wcc0w",
+          "title": "도시 진입",
+          "type": "장소 변경",
+          "content": "수문장 골렘을 쓰러뜨리자 수문이 천천히 열리며 어두운 도시 내부로 통하는 길이 드러납니다. 숨을 고르고 도시 안으로 발을 들여놓습니다.",
+          "characterIds": [],
+          "nextSceneId": "81u727ba1",
+          "newLocationName": "심연에 잠긴 도시 외곽"
+        },
+        {
+          "id": "81u727ba1",
+          "stageId": "rrg5wcc0w",
+          "title": "잠긴 거리",
+          "type": "나레이션",
+          "content": "도시 내부는 예상대로 대부분 물에 잠겨 있습니다. 부서진 건물 잔해와 이끼 낀 조각상들이 고대 문명의 흔적을 말해주지만, 동시에 음침하고 위험한 기운이 감돕니다.",
+          "characterIds": [],
+          "nextSceneId": "q1mxxstex"
+        },
+        {
+          "id": "q1mxxstex",
+          "stageId": "rrg5wcc0w",
+          "title": "부패한 그림자",
+          "type": "일반 전투",
+          "content": "어두운 골목에서 기괴하게 뒤틀린 존재들이 나타납니다. 한때 이 도시의 주민이었을지도 모르는 타락한 존재들입니다.",
+          "characterIds": [],
+          "nextSceneId": "me4mrk8yk",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "ryw7665t6"
+            ],
+            "reward": "오염된 살점, 경험치"
+          }
+        },
+        {
+          "id": "me4mrk8yk",
+          "stageId": "rrg5wcc0w",
+          "title": "안전 지대 탐색",
+          "type": "나레이션",
+          "content": "계속해서 도시 깊숙한 곳으로 나아가야 하지만, 잠시 숨을 돌리고 주변을 살필 안전한 장소가 필요합니다.",
+          "characterIds": [],
+          "nextSceneId": "g9kelu3cc"
+        },
+        {
+          "id": "g9kelu3cc",
+          "stageId": "rrg5wcc0w",
+          "title": "수중 정원 발견",
+          "type": "나레이션",
+          "content": "폐허 속에서 놀랍게도 푸른 빛을 내는 식물들과 맑은 물이 있는 수중 정원을 발견했습니다. 이곳만이 마치 시간이 멈춘 듯 평화로워 보입니다.",
+          "characterIds": [],
+          "nextSceneId": "vaefqcuqv"
+        },
+        {
+          "id": "vaefqcuqv",
+          "stageId": "rrg5wcc0w",
+          "title": "정원의 수호자",
+          "type": "일반 전투",
+          "content": "아름다운 정원에 발을 들여놓자, 물과 식물의 기운이 뭉쳐진 듯한 존재가 나타나 침입자를 경계합니다.",
+          "characterIds": [],
+          "nextSceneId": "axsv7fju7",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "iec6unuis"
+            ],
+            "reward": "맑은 물방울, 경험치"
+          }
+        },
+        {
+          "id": "axsv7fju7",
+          "stageId": "rrg5wcc0w",
+          "title": "수상한 흔적",
+          "type": "나레이션",
+          "content": "정원을 지나 도시의 중심부로 향하는 길목에서 어둠의 마법 흔적과 발자국들을 발견했습니다. 어둠의 세력이 이미 이 도시 깊숙한 곳까지 진입한 것 같습니다.",
+          "characterIds": [],
+          "nextSceneId": "2wnthq7q1"
+        },
+        {
+          "id": "2wnthq7q1",
+          "stageId": "rrg5wcc0w",
+          "title": "막다른 길목",
+          "type": "나레이션",
+          "content": "진행하려던 주요 통로가 거대한 잔해로 막혀 있습니다. 다른 길을 찾거나, 이 잔해를 치워야 합니다.",
+          "characterIds": [],
+          "nextSceneId": "cgdom0g02"
+        },
+        {
+          "id": "cgdom0g02",
+          "stageId": "rrg5wcc0w",
+          "title": "우회로 탐색",
+          "type": "나레이션",
+          "content": "잔해를 피해 도시의 좁은 뒷골목이나 무너진 건물의 내부를 탐색하기 시작합니다. 예상치 못한 위험이 도사리고 있을 수 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "ocyl1y660"
+        },
+        {
+          "id": "ocyl1y660",
+          "stageId": "rrg5wcc0w",
+          "title": "잔해 속 몬스터",
+          "type": "일반 전투",
+          "content": "잔해를 치우려 하자, 그 속에서 숨어있던 타락한 존재들이 튀어나와 공격합니다.",
+          "characterIds": [],
+          "nextSceneId": "4l53yj660",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "ryw7665t6",
+              "qdc7vjhr7"
+            ],
+            "reward": "낡은 천 조각, 경험치"
+          }
+        },
+        {
+          "id": "4l53yj660",
+          "stageId": "rrg5wcc0w",
+          "title": "숨겨진 은신처 발견",
+          "type": "나레이션",
+          "content": "우여곡절 끝에 폐허 깊숙한 곳에서 빛이 새어 나오는 곳을 발견했습니다. 조심스럽게 다가가자, 외부와 단절된 은신처가 나타납니다. 이 도시의 생존자들이 모여 사는 곳 같습니다.",
+          "characterIds": [],
+          "nextSceneId": "nbiss9f4c"
+        },
+        {
+          "id": "nbiss9f4c",
+          "stageId": "rrg5wcc0w",
+          "title": "심연 마을",
+          "type": "마을",
+          "content": "어둠과 위험으로 가득한 도시 속에서 발견한 작은 안식처입니다. 생존자들이 최소한의 문명을 이루고 살아가고 있습니다. 이곳에서 재정비하고 정보를 얻을 수 있을 것 같습니다.",
+          "characterIds": [],
+          "nextSceneId": "uswqsqils"
+        },
+        {
+          "id": "uswqsqils",
+          "stageId": "rrg5wcc0w",
+          "title": "촌장 '엘라라'와의 대화",
+          "type": "대화",
+          "content": "마을의 촌장인 엘라라를 만났습니다. 그녀는 경계심을 풀고 도시의 역사와 현재 상황, 그리고 도시에 나타난 어둠의 세력과 '심연의 지배자'에 대해 이야기해 줍니다.",
+          "characterIds": [
+            "zwir7pslr"
+          ],
+          "nextSceneId": "6zcc21k7g"
+        },
+        {
+          "id": "6zcc21k7g",
+          "stageId": "rrg5wcc0w",
+          "title": "상점 이용",
+          "type": "나레이션",
+          "content": "마을 상점에서 물약이나 장비를 구매하며 다음 여정을 준비합니다.",
+          "characterIds": [],
+          "nextSceneId": "wccrdqzwa"
+        },
+        {
+          "id": "wccrdqzwa",
+          "stageId": "rrg5wcc0w",
+          "title": "다음 목표 설정",
+          "type": "나레이션",
+          "content": "엘라라와 마을 주민들로부터 얻은 정보를 토대로, 도시의 심장부이자 유물이 잠들어 있을 가능성이 높은 고대 기록 보관소로 향하기로 결정합니다.",
+          "characterIds": [],
+          "nextSceneId": "a7gcu9w2m"
+        },
+        {
+          "id": "a7gcu9w2m",
+          "stageId": "rrg5wcc0w",
+          "title": "심연 마을 출발",
+          "type": "장소 변경",
+          "content": "심연 마을에서의 재정비를 마치고, 도시의 더 깊고 위험한 중심부로 발걸음을 옮깁니다.",
+          "characterIds": [],
+          "nextSceneId": "9nc9i0n8f",
+          "newLocationName": "심연에 잠긴 도시 중심부"
+        },
+        {
+          "id": "9nc9i0n8f",
+          "stageId": "rrg5wcc0w",
+          "title": "중앙 광장 진입",
+          "type": "나레이션",
+          "content": "무너진 건물들을 지나 도시의 중앙 광장에 도착했습니다. 한때 번성했을 이곳은 이제 어둠의 기운이 짙게 깔려있습니다.",
+          "characterIds": [],
+          "nextSceneId": "wwbz5hgz1"
+        },
+        {
+          "id": "wwbz5hgz1",
+          "stageId": "rrg5wcc0w",
+          "title": "광장의 매복",
+          "type": "일반 전투",
+          "content": "광장에 들어서자마자 어둠의 세력이 매복하고 있었습니다. 사방에서 적들이 몰려옵니다.",
+          "characterIds": [],
+          "nextSceneId": "ppsrvztxz",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "qdc7vjhr7",
+              "ryw7665t6"
+            ],
+            "reward": "어둠의 조각, 경험치"
+          }
+        },
+        {
+          "id": "ppsrvztxz",
+          "stageId": "rrg5wcc0w",
+          "title": "고대 기록 보관소 입구",
+          "type": "나레이션",
+          "content": "광장 끝에서 거대한 고대 건축물을 발견했습니다. 이곳이 촌장 엘라라가 말했던 기록 보관소 입구인 것 같습니다.",
+          "characterIds": [],
+          "nextSceneId": "urmvd73r2"
+        },
+        {
+          "id": "urmvd73r2",
+          "stageId": "rrg5wcc0w",
+          "title": "보관소 내부",
+          "type": "장소 변경",
+          "content": "기록 보관소 안으로 들어갑니다. 내부는 물에 잠겨 있지 않지만, 습하고 차가운 공기가 가득합니다. 고대의 서류와 유물들이 흩어져 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "qi70xqd3f",
+          "newLocationName": "고대 기록 보관소"
+        },
+        {
+          "id": "qi70xqd3f",
+          "stageId": "rrg5wcc0w",
+          "title": "잃어버린 지식",
+          "type": "아이템 획득",
+          "content": "오래된 책장 사이에서 먼지 쌓인 고대 기록을 발견했습니다. 심연의 지배자에 대한 단서나, 유물에 대한 중요한 정보가 담겨 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "ou6of8z1i",
+          "item": "고대 기록서"
+        },
+        {
+          "id": "ou6of8z1i",
+          "stageId": "rrg5wcc0w",
+          "title": "지식의 수호자",
+          "type": "일반 전투",
+          "content": "고대 기록을 획득하자, 보관소를 지키는 마법 구조체가 활성화되어 공격해 옵니다.",
+          "characterIds": [],
+          "nextSceneId": "ntojtshb1",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "8c4k3seue"
+            ],
+            "reward": "마력 깃든 파편, 경험치"
+          }
+        },
+        {
+          "id": "ntojtshb1",
+          "stageId": "rrg5wcc0w",
+          "title": "심연의 심장부로 가는 길",
+          "type": "나레이션",
+          "content": "기록 보관소의 가장 깊은 곳에서 아래로 통하는 거대한 통로를 발견했습니다. 이곳이 바로 '심연의 심장부'이자, 보스가 기다리고 있는 곳일 것입니다.",
+          "characterIds": [],
+          "nextSceneId": "dsw40n9bq"
+        },
+        {
+          "id": "dsw40n9bq",
+          "stageId": "rrg5wcc0w",
+          "title": "심장부 진입",
+          "type": "장소 변경",
+          "content": "마지막 숨을 고르고, 심연의 심장부로 발을 내딛습니다. 어둠과 고대 마법의 기운이 뒤섞여 압도적인 분위기를 자아냅니다.",
+          "characterIds": [],
+          "nextSceneId": "yu70c85ii",
+          "newLocationName": "심연의 심장부"
+        },
+        {
+          "id": "yu70c85ii",
+          "stageId": "rrg5wcc0w",
+          "title": "보스 등장",
+          "type": "나레이션",
+          "content": "넓은 공간 중앙에서 거대한 존재가 모습을 드러냅니다. 바로 '심연의 지배자 크라켄'입니다. 유물을 감싸고 있거나, 유물의 힘을 흡수하려 하고 있습니다. 최후의 결전이 시작됩니다.",
+          "characterIds": [],
+          "nextSceneId": "tkyyydpz0"
+        },
+        {
+          "id": "tkyyydpz0",
+          "stageId": "rrg5wcc0w",
+          "title": "최후의 결전",
+          "type": "보스 전투",
+          "content": "심연의 지배자 크라켄과의 전투입니다. 이 거대한 괴물을 쓰러뜨리고 잃어버린 유물을 되찾아야 합니다!",
+          "characterIds": [],
+          "nextSceneId": null,
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "vptt9sh73"
+            ],
+            "reward": "고대 유물 '심연의 눈', 보스 전리품, 대량의 경험치"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2wvpzhcyv",
+      "title": "고대 학술원의 밀실",
+      "settingDescription": "수세기 동안 봉인되었던 고대 학술원의 지하 밀실. 잃어버린 지식과 위험한 비밀들이 잠들어 있으며, 어둠의 세력이 이를 노리고 침입했습니다.",
+      "characters": [
+        {
+          "id": "l1xvltade",
+          "name": "플레이어 캐릭터",
+          "type": "플레이어 캐릭터",
+          "description": "잊혀진 유물을 찾아 모험하는 용감한 모험가.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "bxnffoy3q",
+          "name": "촌장 엘리아스",
+          "type": "NPC",
+          "description": "고대 학술원 근처에 숨어 사는 작은 마을의 촌장. 학술원에서 흘러나오는 불길한 기운 때문에 걱정이 많습니다.",
+          "dialogueSeed": "학술원에는 위험한 기운이 감돌고 있소. 부디 조심하시오."
+        },
+        {
+          "id": "lwgssmf3x",
+          "name": "현자 엘라라",
+          "type": "NPC",
+          "description": "고대 학술원의 지식을 수호하는 영적인 존재. 오랜 시간 밀실에 묶여 있으며, 진실을 아는 몇 안 되는 존재입니다.",
+          "dialogueSeed": "이곳의 지식은 양날의 검과 같으니, 신중하게 다루어야 하오."
+        },
+        {
+          "id": "abztuzlvm",
+          "name": "폐허 수호자",
+          "type": "일반 몬스터",
+          "description": "학술원 폐허를 지키는 돌이나 고철로 만들어진 고대의 자동 인형.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "9viv72213",
+          "name": "살아있는 서책",
+          "type": "일반 몬스터",
+          "description": "밀실의 마력으로 인해 생명력을 얻은 위험한 고대 서적들.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "1u96g5eam",
+          "name": "어둠의 밀사",
+          "type": "일반 몬스터",
+          "description": "어둠의 세력이 파견한 하급 요원. 밀실의 방어를 무력화하려 합니다.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "5o6sy2rfw",
+          "name": "마력 깃든 자동인형",
+          "type": "일반 몬스터",
+          "description": "밀실 깊숙한 곳의 강력한 자동 방어 시스템.",
+          "dialogueSeed": null
+        },
+        {
+          "id": "bja44d08f",
+          "name": "어둠의 사서 크로노스",
+          "type": "보스 몬스터",
+          "description": "어둠의 세력이 밀실의 지식을 독점하기 위해 파견한 강력한 마법사. 금지된 마법에 통달했습니다.",
+          "dialogueSeed": null
+        }
+      ],
+      "scenes": [
+        {
+          "id": "36bedut0t",
+          "stageId": "2wvpzhcyv",
+          "title": "숨겨진 작은 마을",
+          "type": "마을",
+          "content": "고대 학술원 폐허 근처에 자리 잡은 작고 평화로운 마을입니다. 하지만 주민들의 얼굴에는 근심이 가득합니다.",
+          "characterIds": [],
+          "nextSceneId": "ph4tl83a1"
+        },
+        {
+          "id": "ph4tl83a1",
+          "stageId": "2wvpzhcyv",
+          "title": "엘리아스 촌장의 부탁",
+          "type": "대화",
+          "content": "촌장 엘리아스가 다가와 학술원 폐허에서 흘러나오는 불길한 기운에 대해 이야기하며 도움을 요청합니다.",
+          "characterIds": [
+            "bxnffoy3q"
+          ],
+          "nextSceneId": "bxhzlsc5e"
+        },
+        {
+          "id": "bxhzlsc5e",
+          "stageId": "2wvpzhcyv",
+          "title": "학술원 폐허에 대한 정보",
+          "type": "대화",
+          "content": "엘리아스 촌장이 학술원 폐허에 대한 몇 가지 소문을 들려줍니다. 오래전 봉인된 밀실이 있으며, 최근 수상한 자들이 그곳을 드나든다는 이야기입니다.",
+          "characterIds": [
+            "bxnffoy3q"
+          ],
+          "nextSceneId": "fsz87esqm"
+        },
+        {
+          "id": "fsz87esqm",
+          "stageId": "2wvpzhcyv",
+          "title": "학술원 폐허로 향하며",
+          "type": "장소 변경",
+          "content": "작은 마을을 뒤로하고 고대 학술원의 폐허로 향합니다. 멀리서도 느껴지는 고요하지만 위협적인 기운에 발걸음이 무거워집니다.",
+          "characterIds": [],
+          "nextSceneId": "tr3juji12",
+          "newLocationName": "고대 학술원 폐허 입구"
+        },
+        {
+          "id": "tr3juji12",
+          "stageId": "2wvpzhcyv",
+          "title": "폐허 입구",
+          "type": "나레이션",
+          "content": "무너진 기둥과 담벼락만이 남아있는 고대 학술원의 입구에 도착했습니다. 적막만이 흐르는 이곳에서 밀실로 통하는 숨겨진 입구를 찾아야 합니다.",
+          "characterIds": [],
+          "nextSceneId": "evktfemh2"
+        },
+        {
+          "id": "evktfemh2",
+          "stageId": "2wvpzhcyv",
+          "title": "첫 번째 수호자",
+          "type": "일반 전투",
+          "content": "폐허 구석에서 잠들어 있던 '폐허 수호자' 몇 개체가 움직이기 시작하며 길을 막아섭니다.",
+          "characterIds": [],
+          "nextSceneId": "ga676jx18",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "abztuzlvm"
+            ],
+            "reward": "약간의 경험치와 낡은 부품"
+          }
+        },
+        {
+          "id": "ga676jx18",
+          "stageId": "2wvpzhcyv",
+          "title": "숨겨진 입구 발견",
+          "type": "나레이션",
+          "content": "수호자들을 쓰러뜨린 후, 무너진 벽 뒤에 가려져 있던 지하로 통하는 계단을 발견합니다. 이곳이 밀실로 향하는 입구인 것 같습니다.",
+          "characterIds": [],
+          "nextSceneId": "3mx0kghb7"
+        },
+        {
+          "id": "3mx0kghb7",
+          "stageId": "2wvpzhcyv",
+          "title": "밀실로 진입",
+          "type": "장소 변경",
+          "content": "어둡고 습한 계단을 따라 지하 깊숙한 곳으로 내려갑니다. 공기가 차가워지고 알 수 없는 마력이 느껴집니다.",
+          "characterIds": [],
+          "nextSceneId": "jwzqfgm75",
+          "newLocationName": "고대 학술원 지하 밀실"
+        },
+        {
+          "id": "jwzqfgm75",
+          "stageId": "2wvpzhcyv",
+          "title": "밀실의 중앙 홀",
+          "type": "나레이션",
+          "content": "계단을 내려오자 거대한 지하 홀이 나타납니다. 끝이 보이지 않는 책장들이 늘어서 있고, 희미한 마법의 빛이 공간을 비춥니다.",
+          "characterIds": [],
+          "nextSceneId": "3voevtlww"
+        },
+        {
+          "id": "3voevtlww",
+          "stageId": "2wvpzhcyv",
+          "title": "현자 엘라라의 환영",
+          "type": "대화",
+          "content": "홀 중앙에서 푸른 빛의 형체가 나타납니다. 고대 학술원의 현자 엘라라의 영혼입니다. 그녀는 침입자들에 대해 경고합니다.",
+          "characterIds": [
+            "lwgssmf3x"
+          ],
+          "nextSceneId": "qwaqmdi64"
+        },
+        {
+          "id": "qwaqmdi64",
+          "stageId": "2wvpzhcyv",
+          "title": "밀실의 역사",
+          "type": "대화",
+          "content": "엘라라는 이곳이 고대 문명의 모든 지식을 모아 봉인한 곳이며, 위험한 지식들이 잠들어 있다고 설명합니다.",
+          "characterIds": [
+            "lwgssmf3x"
+          ],
+          "nextSceneId": "wsx7g56km"
+        },
+        {
+          "id": "wsx7g56km",
+          "stageId": "2wvpzhcyv",
+          "title": "어둠의 세력의 목적",
+          "type": "대화",
+          "content": "엘라라는 어둠의 세력이 밀실의 가장 깊은 곳에 봉인된 궁극의 지식, 혹은 유물을 노리고 있으며, 이미 깊숙이 침투했다고 경고합니다.",
+          "characterIds": [
+            "lwgssmf3x"
+          ],
+          "nextSceneId": "keh85w2yj"
+        },
+        {
+          "id": "keh85w2yj",
+          "stageId": "2wvpzhcyv",
+          "title": "지식의 복도",
+          "type": "장소 변경",
+          "content": "중앙 홀에서 이어진 복도로 들어섭니다. 양옆으로 끝없이 책장이 늘어서 있으며, 공기가 건조하고 오래된 종이 냄새가 가득합니다.",
+          "characterIds": [],
+          "nextSceneId": "oew7o7l6j",
+          "newLocationName": "밀실 - 지식의 복도"
+        },
+        {
+          "id": "oew7o7l6j",
+          "stageId": "2wvpzhcyv",
+          "title": "살아있는 서책들의 습격",
+          "type": "일반 전투",
+          "content": "복도를 지나가려 하자, 책장에 꽂혀 있던 서책 몇 권이 갑자기 펼쳐지며 날카로운 종잇날을 세워 공격해 옵니다.",
+          "characterIds": [],
+          "nextSceneId": "km2wuucu7",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "9viv72213"
+            ],
+            "reward": "약간의 경험치와 고대 종이 조각"
+          }
+        },
+        {
+          "id": "km2wuucu7",
+          "stageId": "2wvpzhcyv",
+          "title": "방어 시스템 작동",
+          "type": "나레이션",
+          "content": "서책들을 처리하자, 복도 바닥에서 마법 문양이 빛나며 방어 시스템이 작동하려 합니다. 빠르게 다음 장소로 이동해야 합니다.",
+          "characterIds": [],
+          "nextSceneId": "cez4fr7z1"
+        },
+        {
+          "id": "cez4fr7z1",
+          "stageId": "2wvpzhcyv",
+          "title": "마법 연구실",
+          "type": "장소 변경",
+          "content": "방어 시스템을 피해 복도 끝의 문을 열고 들어선 곳은 다양한 마법 실험 도구와 기록이 가득한 연구실입니다. 어둠의 세력이 이곳을 뒤진 흔적이 보입니다.",
+          "characterIds": [],
+          "nextSceneId": "3gova1mdz",
+          "newLocationName": "밀실 - 마법 연구실"
+        },
+        {
+          "id": "3gova1mdz",
+          "stageId": "2wvpzhcyv",
+          "title": "어둠의 밀사와의 조우",
+          "type": "일반 전투",
+          "content": "연구실 내부를 살펴보던 중, 정보를 찾고 있던 어둠의 세력 요원인 '어둠의 밀사'와 마주칩니다.",
+          "characterIds": [],
+          "nextSceneId": "a3ohlex3z",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "1u96g5eam"
+            ],
+            "reward": "경험치와 어둠의 세력 증표"
+          }
+        },
+        {
+          "id": "a3ohlex3z",
+          "stageId": "2wvpzhcyv",
+          "title": "단서 확보",
+          "type": "나레이션",
+          "content": "쓰러뜨린 어둠의 밀사에게서 밀실의 특정 구역에 대한 정보가 담긴 낡은 문서를 발견합니다.",
+          "characterIds": [],
+          "nextSceneId": "pbuuo5uqa"
+        },
+        {
+          "id": "pbuuo5uqa",
+          "stageId": "2wvpzhcyv",
+          "title": "다음 경로 결정",
+          "type": "선택",
+          "content": "문서에 따르면 밀실 깊숙한 곳으로 가는 경로는 두 가지입니다. 하나는 고대 자동인형들이 지키는 방어 구역이고, 다른 하나는 함정이 많지만 어둠의 세력이 아직 덜 탐사한 구역입니다.",
+          "characterIds": [],
+          "choices": [
+            {
+              "id": "0dd04aavm",
+              "text": "방어 자동인형들이 지키는 구역으로 이동한다.",
+              "nextSceneId": "l8khgo6gv"
+            },
+            {
+              "id": "t44jdcfip",
+              "text": "함정이 많은 미탐사 구역으로 이동한다.",
+              "nextSceneId": "1dmbgjo1f"
+            }
+          ]
+        },
+        {
+          "id": "l8khgo6gv",
+          "stageId": "2wvpzhcyv",
+          "title": "자동인형 방어 구역",
+          "type": "장소 변경",
+          "content": "금속과 마법으로 이루어진 복도입니다. 정교하게 제작된 '마력 깃든 자동인형'들이 경계를 서고 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "vw4y0e408",
+          "newLocationName": "밀실 - 자동인형 방어 구역"
+        },
+        {
+          "id": "vw4y0e408",
+          "stageId": "2wvpzhcyv",
+          "title": "자동인형 격파",
+          "type": "일반 전투",
+          "content": "방어 시스템이 침입자를 감지하고 '마력 깃든 자동인형'들이 공격해 옵니다. 강력한 방어와 공격을 자랑합니다.",
+          "characterIds": [],
+          "nextSceneId": "b7soopw5a",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "5o6sy2rfw"
+            ],
+            "reward": "경험치와 마력 핵 조각"
+          }
+        },
+        {
+          "id": "b7soopw5a",
+          "stageId": "2wvpzhcyv",
+          "title": "방어 구역 통과",
+          "type": "나레이션",
+          "content": "자동인형들을 모두 파괴하고 방어 구역을 통과합니다. 다음 구역으로 향하는 문이 보입니다.",
+          "characterIds": [],
+          "nextSceneId": "1dmbgjo1f"
+        },
+        {
+          "id": "1dmbgjo1f",
+          "stageId": "2wvpzhcyv",
+          "title": "미탐사 복도 진입",
+          "type": "장소 변경",
+          "content": "습하고 어두운 복도입니다. 바닥에는 먼지가 쌓여 있고, 곳곳에 함정의 흔적이 보입니다.",
+          "characterIds": [],
+          "nextSceneId": "ai3k35m9c",
+          "newLocationName": "밀실 - 미탐사 복도"
+        },
+        {
+          "id": "ai3k35m9c",
+          "stageId": "2wvpzhcyv",
+          "title": "함정 회피 시도",
+          "type": "선택",
+          "content": "복도 바닥의 특정 지점이 수상하게 보입니다. 함정일 가능성이 높습니다. 조심스럽게 회피하거나, 위험을 감수하고 돌파를 시도할 수 있습니다.",
+          "characterIds": [],
+          "choices": [
+            {
+              "id": "icj8h0j09",
+              "text": "조심스럽게 함정을 회피한다.",
+              "nextSceneId": "bmetmkdpq"
+            },
+            {
+              "id": "sp43xp2hp",
+              "text": "위험을 감수하고 빠르게 돌파한다.",
+              "nextSceneId": "0en1x7dzk"
+            }
+          ]
+        },
+        {
+          "id": "bmetmkdpq",
+          "stageId": "2wvpzhcyv",
+          "title": "함정 회피 성공",
+          "type": "나레이션",
+          "content": "신중하게 움직여 함정을 무사히 통과했습니다. 복도 끝에 다음 구역으로 통하는 문이 보입니다.",
+          "characterIds": [],
+          "nextSceneId": "0en1x7dzk"
+        },
+        {
+          "id": "0en1x7dzk",
+          "stageId": "2wvpzhcyv",
+          "title": "함정 발동",
+          "type": "일반 전투",
+          "content": "돌파를 시도하자 바닥의 함정이 발동하며 날카로운 칼날이 튀어나오고, 소란에 이끌려 '살아있는 서책'들이 나타나 공격합니다.",
+          "characterIds": [],
+          "nextSceneId": "zqscgx1xl",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "9viv72213"
+            ],
+            "reward": "경험치"
+          }
+        },
+        {
+          "id": "zqscgx1xl",
+          "stageId": "2wvpzhcyv",
+          "title": "미탐사 구역 통과",
+          "type": "나레이션",
+          "content": "함정을 극복하거나 회피하고 미탐사 복도를 통과했습니다. 다음 구역으로 향하는 문이 보입니다.",
+          "characterIds": [],
+          "nextSceneId": "31uzkhg97"
+        },
+        {
+          "id": "31uzkhg97",
+          "stageId": "2wvpzhcyv",
+          "title": "금지된 지식의 전당 입구",
+          "type": "장소 변경",
+          "content": "두 경로가 합쳐지는 지점에 도달했습니다. 거대한 문이 앞을 막고 있으며, 문에서는 강력하고 불길한 마력이 뿜어져 나옵니다. 이곳이 금지된 지식이 봉인된 곳입니다.",
+          "characterIds": [],
+          "nextSceneId": "whq3fh4in",
+          "newLocationName": "밀실 - 금지된 지식의 전당 입구"
+        },
+        {
+          "id": "whq3fh4in",
+          "stageId": "2wvpzhcyv",
+          "title": "수호자와 침입자의 충돌",
+          "type": "일반 전투",
+          "content": "금지된 전당 입구에서 '마력 깃든 자동인형'과 '어둠의 밀사'들이 서로 싸우고 있습니다. 혼란스러운 틈을 타거나, 모두 상대해야 합니다.",
+          "characterIds": [],
+          "nextSceneId": "wdetxjnpu",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "5o6sy2rfw",
+              "1u96g5eam"
+            ],
+            "reward": "많은 경험치와 다양한 전리품"
+          }
+        },
+        {
+          "id": "wdetxjnpu",
+          "stageId": "2wvpzhcyv",
+          "title": "엘라라의 마지막 경고",
+          "type": "대화",
+          "content": "전투가 끝난 후, 엘라라의 형체가 다시 나타납니다. 그녀는 문 너머에 봉인된 지식과 그것을 노리는 '어둠의 사서 크로노스'에 대해 경고하며, 선택의 중요성을 강조합니다.",
+          "characterIds": [
+            "lwgssmf3x"
+          ],
+          "nextSceneId": "8pjys1ups"
+        },
+        {
+          "id": "8pjys1ups",
+          "stageId": "2wvpzhcyv",
+          "title": "봉인 해제 방법 탐색",
+          "type": "나레이션",
+          "content": "엘라라의 말에 따라 문 근처를 조사합니다. 문을 열기 위한 고대 마법 장치나 열쇠를 찾아야 합니다.",
+          "characterIds": [],
+          "nextSceneId": "pcxrr61yj"
+        },
+        {
+          "id": "pcxrr61yj",
+          "stageId": "2wvpzhcyv",
+          "title": "봉인 해제 장치 발견",
+          "type": "아이템 획득",
+          "content": "조사 끝에 숨겨진 받침대 위에서 문을 봉인 해제할 수 있는 '고대 봉인석'을 발견합니다.",
+          "characterIds": [],
+          "nextSceneId": "glfihc2ai",
+          "item": "고대 봉인석"
+        },
+        {
+          "id": "glfihc2ai",
+          "stageId": "2wvpzhcyv",
+          "title": "금지된 전당 개방",
+          "type": "나레이션",
+          "content": "'고대 봉인석'을 사용하자, 거대한 문에 새겨진 마법 문양이 빛나며 서서히 열리기 시작합니다. 문 너머에서 강력한 어둠의 기운이 쏟아져 나옵니다.",
+          "characterIds": [],
+          "nextSceneId": "cc7w1m6h3"
+        },
+        {
+          "id": "cc7w1m6h3",
+          "stageId": "2wvpzhcyv",
+          "title": "금지된 지식의 전당",
+          "type": "장소 변경",
+          "content": "문 안쪽은 중앙에 거대한 제단이 있고, 그 위에 알 수 없는 유물이 떠 있는 넓은 공간입니다. 그리고 제단 앞에는 '어둠의 사서 크로노스'가 서 있습니다. 그는 유물을 손에 넣으려 하고 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "4lf0e8lb7",
+          "newLocationName": "밀실 - 금지된 지식의 전당"
+        },
+        {
+          "id": "4lf0e8lb7",
+          "stageId": "2wvpzhcyv",
+          "title": "어둠의 사서 크로노스",
+          "type": "보스 전투",
+          "content": "'어둠의 사서 크로노스'가 금지된 마법으로 플레이어를 공격해 옵니다. 밀실의 운명과 봉인된 지식의 행방을 결정할 최후의 전투입니다.",
+          "characterIds": [],
+          "nextSceneId": null,
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "bja44d08f"
+            ],
+            "reward": "많은 경험치와 희귀한 마법 유물, '고대 봉인석'"
+          }
+        }
+      ]
+    },
+    {
+      "id": "dxzol0v5p",
+      "title": "고대 수호림의 심장부",
+      "settingDescription": "오랜 시간 동안 잊혀졌던 고대 수호림. 강력한 정령들이 지키던 이곳이 어둠의 세력에 의해 타락하고 있습니다.",
+      "characters": [
+        {
+          "id": "8f7pmnm80",
+          "name": "숲의 현자",
+          "type": "NPC",
+          "description": "고대 수호림 깊은 곳에 숨겨진 작은 마을의 지도자. 숲의 정령들과 교감하며 살아왔으나, 최근 숲의 타락으로 고통받고 있다.",
+          "dialogueSeed": "숲의 타락에 대한 경고, 어둠의 세력에 대한 정보, 수호목 정령에 대한 이야기"
+        },
+        {
+          "id": "oruaydqzo",
+          "name": "타락한 숲지기",
+          "type": "일반 몬스터",
+          "description": "숲의 기운이 뒤틀려 탄생한 괴물. 날카로운 발톱과 이빨로 공격한다."
+        },
+        {
+          "id": "wku11scr9",
+          "name": "그림자 늑대",
+          "type": "일반 몬스터",
+          "description": "어둠의 힘에 물든 늑대. 그림자처럼 빠르게 움직이며 무리를 지어 사냥한다."
+        },
+        {
+          "id": "mpscdi7y3",
+          "name": "어둠의 추종자",
+          "type": "일반 몬스터",
+          "description": "어둠의 세력을 숭배하는 인간 또는 아인 종족. 타락한 마법이나 무기를 사용한다."
+        },
+        {
+          "id": "jm6j7exn1",
+          "name": "타락한 수호목 정령",
+          "type": "보스 몬스터",
+          "description": "고대 수호림의 중심을 지키던 강력한 정령이었으나, 어둠의 힘에 완전히 잠식당했다. 거대한 몸집과 강력한 자연 마법으로 공격한다."
+        }
+      ],
+      "scenes": [
+        {
+          "id": "n46mjduhk",
+          "stageId": "dxzol0v5p",
+          "title": "숲의 경계",
+          "type": "나레이션",
+          "content": "차가운 바람이 얼굴을 스친다. 고대 수호림의 입구에 도착했다. 한때 생명력으로 넘치던 숲은 이제 기괴하게 뒤틀린 나무들과 음산한 침묵만이 가득하다. 어둠의 기운이 느껴진다.",
+          "characterIds": [],
+          "nextSceneId": "kfya3zrif"
+        },
+        {
+          "id": "kfya3zrif",
+          "stageId": "dxzol0v5p",
+          "title": "타락한 첫 조우",
+          "type": "일반 전투",
+          "content": "숲의 경계를 넘자마자, 타락한 기운에 오염된 숲지기들이 공격해온다. 경계를 늦추지 마라!",
+          "characterIds": [],
+          "nextSceneId": "redztqo31",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "oruaydqzo",
+              "oruaydqzo",
+              "wku11scr9"
+            ],
+            "reward": "타락한 숲지기의 발톱, 그림자 늑대의 가죽, 소량의 골드"
+          }
+        },
+        {
+          "id": "redztqo31",
+          "stageId": "dxzol0v5p",
+          "title": "숲 속으로",
+          "type": "나레이션",
+          "content": "첫 번째 위협을 물리치고 숲 속으로 더 깊이 들어간다. 숲은 더욱 어두워지고, 기이한 형상의 식물들이 길을 막아선다. 발밑에서는 알 수 없는 기운이 느껴진다.",
+          "characterIds": [],
+          "nextSceneId": "335e4j4kv"
+        },
+        {
+          "id": "335e4j4kv",
+          "stageId": "dxzol0v5p",
+          "title": "숲 속의 빛",
+          "type": "아이템 획득",
+          "content": "쓰러진 고목 근처에서 희미하게 빛나는 열매를 발견했다. 숲의 순수한 기운이 남아있는 듯하다.",
+          "characterIds": [],
+          "nextSceneId": "yrcer1hic",
+          "item": "정화된 숲의 열매"
+        },
+        {
+          "id": "yrcer1hic",
+          "stageId": "dxzol0v5p",
+          "title": "그림자의 습격",
+          "type": "일반 전투",
+          "content": "좁은 오솔길을 따라 이동하던 중, 그림자 속에서 늑대 무리가 뛰쳐나온다! 그리고 그 뒤에는 어둠의 추종자들이 모습을 드러낸다.",
+          "characterIds": [],
+          "nextSceneId": "77rc27frj",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "wku11scr9",
+              "wku11scr9",
+              "mpscdi7y3"
+            ],
+            "reward": "그림자 늑대의 이빨, 어둠의 추종자 장비 조각, 골드"
+          }
+        },
+        {
+          "id": "77rc27frj",
+          "stageId": "dxzol0v5p",
+          "title": "숨겨진 오솔길",
+          "type": "장소 변경",
+          "content": "전투 후 주변을 살피던 중, 덩굴에 가려진 좁은 오솔길을 발견했다. 이 길이 어딘가로 이어질지도 모른다.",
+          "characterIds": [],
+          "nextSceneId": "0wt53yuao",
+          "newLocationName": "숨겨진 오솔길"
+        },
+        {
+          "id": "0wt53yuao",
+          "stageId": "dxzol0v5p",
+          "title": "예상치 못한 발견",
+          "type": "나레이션",
+          "content": "숨겨진 오솔길은 예상보다 길었다. 숲의 타락이 덜한 지역으로 이어진 듯하다. 멀리서 희미한 불빛이 보인다.",
+          "characterIds": [],
+          "nextSceneId": "gorbzzlvz"
+        },
+        {
+          "id": "gorbzzlvz",
+          "stageId": "dxzol0v5p",
+          "title": "정령의 안식처",
+          "type": "마을",
+          "content": "오솔길 끝에는 놀랍게도 작은 마을이 있었다. 숲의 정령들과 공존하며 살아가는 이들의 안식처인 듯하다. 마을 사람들은 경계하는 눈빛으로 바라보지만, 적대적인 기운은 없다.",
+          "characterIds": [],
+          "nextSceneId": "123v71wc5"
+        },
+        {
+          "id": "123v71wc5",
+          "stageId": "dxzol0v5p",
+          "title": "현자와의 대화",
+          "type": "대화",
+          "content": "마을의 지도자인 '숲의 현자'가 당신에게 다가온다. 그는 숲의 타락과 어둠의 세력에 대해 알고 있는 듯하다.",
+          "characterIds": [
+            "8f7pmnm80"
+          ],
+          "nextSceneId": "8sz672pzs"
+        },
+        {
+          "id": "8sz672pzs",
+          "stageId": "dxzol0v5p",
+          "title": "현자의 조언",
+          "type": "선택",
+          "content": "숲의 현자는 숲의 타락이 '수호목 정령'에게까지 미쳤으며, 어둠의 세력이 숲의 힘을 완전히 장악하려 한다고 말한다. 그는 타락의 근원을 찾기 위해 두 곳을 조사해보라고 조언한다. '오염된 샘터' 또는 '고대 제단'.",
+          "characterIds": [],
+          "choices": [
+            {
+              "id": "0nbz5jp6g",
+              "text": "오염된 샘터를 먼저 조사한다.",
+              "nextSceneId": "hjz60te3b"
+            },
+            {
+              "id": "9430nyd0u",
+              "text": "고대 제단을 먼저 조사한다.",
+              "nextSceneId": "mijh9lv3g"
+            }
+          ]
+        },
+        {
+          "id": "hjz60te3b",
+          "stageId": "dxzol0v5p",
+          "title": "오염된 샘터",
+          "type": "장소 변경",
+          "content": "현자의 조언에 따라 오염된 샘터를 향한다. 맑았던 샘물은 검게 변해 악취를 풍기고 있다.",
+          "characterIds": [],
+          "nextSceneId": "qp9qf1f1u",
+          "newLocationName": "오염된 샘터"
+        },
+        {
+          "id": "qp9qf1f1u",
+          "stageId": "dxzol0v5p",
+          "title": "샘터 전투",
+          "type": "일반 전투",
+          "content": "샘터 근처에는 타락한 숲지기와 그림자 늑대들이 떼를 지어 지키고 있다.",
+          "characterIds": [],
+          "nextSceneId": "mijh9lv3g",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "oruaydqzo",
+              "oruaydqzo",
+              "wku11scr9",
+              "wku11scr9"
+            ],
+            "reward": "오염된 샘물의 결정, 몬스터 부산물, 골드"
+          }
+        },
+        {
+          "id": "mijh9lv3g",
+          "stageId": "dxzol0v5p",
+          "title": "고대 제단",
+          "type": "장소 변경",
+          "content": "현자의 조언에 따라 고대 제단을 향한다. 제단에는 기괴한 문양들이 새겨져 있으며, 어둠의 기운이 강하게 느껴진다.",
+          "characterIds": [],
+          "nextSceneId": "its3ned88",
+          "newLocationName": "고대 제단"
+        },
+        {
+          "id": "its3ned88",
+          "stageId": "dxzol0v5p",
+          "title": "제단 전투",
+          "type": "일반 전투",
+          "content": "고대 제단 주변에는 어둠의 추종자들이 제단을 지키고 있다. 이들이 타락의 원흉일지도 모른다.",
+          "characterIds": [],
+          "nextSceneId": "yywqyg7y5",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "mpscdi7y3",
+              "mpscdi7y3",
+              "oruaydqzo"
+            ],
+            "reward": "제단 조각, 어둠의 추종자 증표, 골드"
+          }
+        },
+        {
+          "id": "yywqyg7y5",
+          "stageId": "dxzol0v5p",
+          "title": "잊혀진 기록",
+          "type": "나레이션",
+          "content": "샘터 또는 제단 조사를 통해 어둠의 세력이 고대 수호목 정령을 타락시켜 숲의 힘을 흡수하려 한다는 기록을 발견했다. 수호목 정령은 숲의 심장부에 있다.",
+          "characterIds": [],
+          "nextSceneId": "uv99vxqh4"
+        },
+        {
+          "id": "uv99vxqh4",
+          "stageId": "dxzol0v5p",
+          "title": "깊은 숲의 갈림길",
+          "type": "선택",
+          "content": "수호목 정령이 있는 숲의 심장부로 향하는 길은 둘이다. 위험하지만 지름길인 '뒤틀린 덩굴 길'과 안전하지만 멀리 돌아가는 '고대 정령의 길'.",
+          "characterIds": [],
+          "choices": [
+            {
+              "id": "zdf35u49s",
+              "text": "위험하지만 빠른 뒤틀린 덩굴 길로 간다.",
+              "nextSceneId": "96w3ts5sl"
+            },
+            {
+              "id": "huekamhvh",
+              "text": "안전하지만 돌아가는 고대 정령의 길로 간다.",
+              "nextSceneId": "buz6lxiqn"
+            }
+          ]
+        },
+        {
+          "id": "96w3ts5sl",
+          "stageId": "dxzol0v5p",
+          "title": "뒤틀린 덩굴 길",
+          "type": "일반 전투",
+          "content": "뒤틀린 덩굴 길은 예상대로 위험했다. 거대한 덩굴이 길을 막고, 그 안에서 타락한 괴물들이 튀어나온다.",
+          "characterIds": [],
+          "nextSceneId": "buz6lxiqn",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "oruaydqzo",
+              "oruaydqzo",
+              "wku11scr9",
+              "mpscdi7y3"
+            ],
+            "reward": "질긴 덩굴 조각, 몬스터 부산물, 골드"
+          }
+        },
+        {
+          "id": "buz6lxiqn",
+          "stageId": "dxzol0v5p",
+          "title": "고대 정령의 길",
+          "type": "일반 전투",
+          "content": "고대 정령의 길은 비교적 안전했지만, 길을 따라가던 중 잠복하고 있던 어둠의 추종자들과 그림자 늑대들의 기습을 받는다.",
+          "characterIds": [],
+          "nextSceneId": "l3wuorvg5",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "wku11scr9",
+              "wku11scr9",
+              "wku11scr9",
+              "mpscdi7y3"
+            ],
+            "reward": "정령의 흔적, 몬스터 부산물, 골드"
+          }
+        },
+        {
+          "id": "l3wuorvg5",
+          "stageId": "dxzol0v5p",
+          "title": "잃어버린 정령석",
+          "type": "아이템 획득",
+          "content": "험난한 길을 헤치고 나아가던 중, 바닥에 떨어진 희미하게 빛나는 돌을 발견했다. 숲의 정령들이 남긴 '정령석'인 듯하다.",
+          "characterIds": [],
+          "nextSceneId": "egt3t4qre",
+          "item": "정령석 조각"
+        },
+        {
+          "id": "egt3t4qre",
+          "stageId": "dxzol0v5p",
+          "title": "심장부로 향하는 길",
+          "type": "나레이션",
+          "content": "마침내 숲의 심장부로 향하는 길이 눈앞에 펼쳐진다. 거대한 나무들이 기괴하게 뒤틀려 있으며, 중앙에서 강력한 어둠의 기운이 뿜어져 나온다.",
+          "characterIds": [],
+          "nextSceneId": "7ona4xz58"
+        },
+        {
+          "id": "7ona4xz58",
+          "stageId": "dxzol0v5p",
+          "title": "오염된 심장부 진입",
+          "type": "장소 변경",
+          "content": "숲의 심장부로 발을 들여놓는다. 공기는 무겁고 탁하며, 시야는 어둡다. 타락한 기운이 모든 것을 뒤덮고 있다.",
+          "characterIds": [],
+          "nextSceneId": "hj2zpgj2b",
+          "newLocationName": "숲의 오염된 심장부"
+        },
+        {
+          "id": "hj2zpgj2b",
+          "stageId": "dxzol0v5p",
+          "title": "기괴한 풍경",
+          "type": "나레이션",
+          "content": "심장부 안쪽은 살아있는 악몽과 같다. 땅은 갈라지고, 나무들은 비명을 지르는 듯한 형상으로 굳어 있다. 중앙에는 거대한 나무 형상이 서 있다.",
+          "characterIds": [],
+          "nextSceneId": "yt0uxfjcs"
+        },
+        {
+          "id": "yt0uxfjcs",
+          "stageId": "dxzol0v5p",
+          "title": "심장부의 수문장",
+          "type": "일반 전투",
+          "content": "숲의 심장부로 가는 마지막 길목을 어둠의 추종자들이 지키고 있다. 이들을 쓰러뜨려야만 수호목 정령에게 다가갈 수 있다.",
+          "characterIds": [],
+          "nextSceneId": "mex5pr1p9",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "mpscdi7y3",
+              "mpscdi7y3",
+              "oruaydqzo",
+              "wku11scr9"
+            ],
+            "reward": "어둠의 심장 조각, 골드"
+          }
+        },
+        {
+          "id": "mex5pr1p9",
+          "stageId": "dxzol0v5p",
+          "title": "타락한 수호목",
+          "type": "보스 전투",
+          "content": "마침내 숲의 심장부 깊은 곳에 도달했다. 한때 숲을 수호했던 고대 정령이 어둠의 힘에 완전히 잠식당해 거대한 괴물로 변해있다. '타락한 수호목 정령'이 포효하며 당신을 공격한다!",
+          "characterIds": [],
+          "nextSceneId": null,
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "jm6j7exn1"
+            ],
+            "reward": "수호목 정령의 핵 (전설 아이템), 대량의 경험치, 대량의 골드"
+          }
+        }
+      ]
+    },
+    {
+      "id": "nbwe06hkm",
+      "title": "성스러운 봉우리의 타락",
+      "settingDescription": "어둠의 세력이 성스러운 봉우리에 자리한 고대 신전을 타락시키고, 봉인된 천공의 힘을 손에 넣으려 합니다. 봉우리를 정화하고 신전을 지키세요.",
+      "characters": [
+        {
+          "id": "by3ufis3p",
+          "name": "산악인 노인",
+          "type": "NPC",
+          "description": "봉우리 입구 근처에서 홀로 살아가는 노련한 산악인. 봉우리의 변화를 감지하고 모험가들에게 경고합니다.",
+          "dialogueSeed": "봉우리는 더 이상 예전 같지 않소. 어둠이 스며들고 있네."
+        },
+        {
+          "id": "gd3tysezd",
+          "name": "은둔 마을 촌장",
+          "type": "NPC",
+          "description": "봉우리 중턱에 숨겨진 은둔 마을의 지도자. 신전의 역사와 타락에 대해 알고 있습니다.",
+          "dialogueSeed": "신전은 한때 봉우리의 심장이었으나, 지금은 병들어가고 있네. 그곳의 타락을 막아야 하네."
+        },
+        {
+          "id": "pweq8xi8z",
+          "name": "신전 수호자 잔영",
+          "type": "NPC",
+          "description": "타락하기 전 신전의 수호자였던 존재의 희미한 잔영. 플레이어에게 신전의 진실과 보스에 대한 단서를 줍니다.",
+          "dialogueSeed": "대제사장은 힘에 눈이 멀어 어둠과 손을 잡았소. 그를 막지 않으면 봉우리는 완전히 타락할 것이오."
+        },
+        {
+          "id": "rdnxdvnm5",
+          "name": "타락한 산양 전사",
+          "type": "일반 몬스터",
+          "description": "어둠에 물들어 흉포해진 산양 형태의 전사. 날카로운 뿔과 발굽으로 공격합니다."
+        },
+        {
+          "id": "arvkm2hyl",
+          "name": "어둠의 정령",
+          "type": "일반 몬스터",
+          "description": "봉우리에 스며든 어둠의 힘이 형상화된 존재. 마법 공격에 능합니다."
+        },
+        {
+          "id": "fhdjwp02f",
+          "name": "봉우리 수호병",
+          "type": "일반 몬스터",
+          "description": "한때 신전을 지켰으나 어둠에 타락한 병사들. 강철 같은 방어와 공격을 자랑합니다."
+        },
+        {
+          "id": "vgiblsv5u",
+          "name": "타락한 대제사장 카라드",
+          "type": "보스 몬스터",
+          "description": "성스러운 봉우리 신전의 대제사장이었으나, 어둠의 힘에 완전히 잠식당했습니다. 강력한 타락 마법과 신성 모독적인 힘을 사용합니다."
+        }
+      ],
+      "scenes": [
+        {
+          "id": "nq2eqzq3p",
+          "stageId": "nbwe06hkm",
+          "title": "봉우리 입구 도착",
+          "type": "나레이션",
+          "content": "험준한 성스러운 봉우리의 입구에 도착했습니다. 거대한 암벽이 하늘을 찌를 듯 솟아 있으며, 기묘하게 어두운 기운이 느껴집니다.",
+          "characterIds": [],
+          "nextSceneId": "vbgjrt36z"
+        },
+        {
+          "id": "vbgjrt36z",
+          "stageId": "nbwe06hkm",
+          "title": "험준한 산길 초입",
+          "type": "장소 변경",
+          "content": "봉우리로 향하는 유일한 산길에 들어섰습니다. 길은 좁고 험하며, 주변의 식물들이 생기를 잃고 시들어 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "o2u9233rc",
+          "newLocationName": "성스러운 봉우리 산길"
+        },
+        {
+          "id": "o2u9233rc",
+          "stageId": "nbwe06hkm",
+          "title": "첫 번째 조우",
+          "type": "일반 전투",
+          "content": "산길을 오르자마자 기괴하게 변형된 산양들이 공격해 옵니다.",
+          "characterIds": [],
+          "nextSceneId": "87c7kg6do",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "rdnxdvnm5"
+            ],
+            "reward": "약간의 경험치와 골드"
+          }
+        },
+        {
+          "id": "87c7kg6do",
+          "stageId": "nbwe06hkm",
+          "title": "산길 탐색",
+          "type": "나레이션",
+          "content": "쓰러진 산양들을 뒤로하고 계속해서 산길을 오릅니다. 오를수록 어둠의 기운은 더욱 강해집니다.",
+          "characterIds": [],
+          "nextSceneId": "3mwguld8m"
+        },
+        {
+          "id": "3mwguld8m",
+          "stageId": "nbwe06hkm",
+          "title": "산악인 노인과의 만남",
+          "type": "대화",
+          "content": "길가 바위에 앉아 있는 늙은 산악인과 마주쳤습니다. 그의 얼굴에는 깊은 근심이 드리워져 있습니다.",
+          "characterIds": [
+            "by3ufis3p"
+          ],
+          "nextSceneId": "7mixwdxwp"
+        },
+        {
+          "id": "7mixwdxwp",
+          "stageId": "nbwe06hkm",
+          "title": "노인의 경고에 대한 반응",
+          "type": "선택",
+          "content": "노인은 봉우리의 위험에 대해 경고하며 신중할 것을 당부합니다. 그의 말에 귀 기울이겠습니까?",
+          "characterIds": [],
+          "choices": [
+            {
+              "id": "qwmvlf6po",
+              "text": "노인의 경고를 듣고 신중하게 진행한다.",
+              "nextSceneId": "9yrezu2bh"
+            },
+            {
+              "id": "2plb68ono",
+              "text": "경고를 무시하고 서둘러 오르막을 향한다.",
+              "nextSceneId": "9f8iw12fj"
+            }
+          ]
+        },
+        {
+          "id": "9yrezu2bh",
+          "stageId": "nbwe06hkm",
+          "title": "가파른 오르막길",
+          "type": "장소 변경",
+          "content": "노인의 조언을 따라 신중하게 발걸음을 옮깁니다. 길은 가파르지만 비교적 안전해 보입니다.",
+          "characterIds": [],
+          "nextSceneId": "9f8iw12fj",
+          "newLocationName": "봉우리 중턱 산길"
+        },
+        {
+          "id": "9f8iw12fj",
+          "stageId": "nbwe06hkm",
+          "title": "매복",
+          "type": "일반 전투",
+          "content": "경고를 무시하고 빠르게 이동하던 중, 어둠의 정령들이 갑자기 나타나 길을 가로막습니다.",
+          "characterIds": [],
+          "nextSceneId": "hmuxaacop",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "arvkm2hyl",
+              "rdnxdvnm5"
+            ],
+            "reward": "약간의 경험치와 마법 재료"
+          }
+        },
+        {
+          "id": "hmuxaacop",
+          "stageId": "nbwe06hkm",
+          "title": "숨겨진 통로 발견",
+          "type": "나레이션",
+          "content": "험난한 산길을 헤쳐나가던 중, 절벽 사이에 숨겨진 좁은 통로를 발견합니다. 이 길이 신전으로 향하는 지름길일까요?",
+          "characterIds": [],
+          "nextSceneId": "s5kj5ng79"
+        },
+        {
+          "id": "s5kj5ng79",
+          "stageId": "nbwe06hkm",
+          "title": "안개 낀 계곡",
+          "type": "장소 변경",
+          "content": "통로를 지나자 짙은 안개로 뒤덮인 작은 계곡이 나타납니다. 습하고 음침한 기운이 감돕니다.",
+          "characterIds": [],
+          "nextSceneId": "kyspqfqai",
+          "newLocationName": "은둔의 계곡"
+        },
+        {
+          "id": "kyspqfqai",
+          "stageId": "nbwe06hkm",
+          "title": "계곡의 수호자들",
+          "type": "일반 전투",
+          "content": "계곡 깊숙한 곳에서 어둠에 물든 봉우리 수호병들이 나타나 길을 막아섭니다.",
+          "characterIds": [],
+          "nextSceneId": "htkpfpnkv",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "fhdjwp02f",
+              "arvkm2hyl"
+            ],
+            "reward": "경험치와 수호병의 장비 조각"
+          }
+        },
+        {
+          "id": "htkpfpnkv",
+          "stageId": "nbwe06hkm",
+          "title": "은둔 마을 입구",
+          "type": "장소 변경",
+          "content": "안개 낀 계곡 끝에서 놀랍게도 사람의 흔적이 느껴집니다. 조용하고 작은 마을의 입구가 보입니다.",
+          "characterIds": [],
+          "nextSceneId": "py9ewgdmv",
+          "newLocationName": "고요한 은둔 마을"
+        },
+        {
+          "id": "py9ewgdmv",
+          "stageId": "nbwe06hkm",
+          "title": "고요한 은둔 마을",
+          "type": "마을",
+          "content": "봉우리의 위험을 피해 살아가는 은둔자들이 모여 사는 마을입니다. 이곳에서 잠시 휴식을 취하고 정보를 얻을 수 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "lnx5wkyl0"
+        },
+        {
+          "id": "lnx5wkyl0",
+          "stageId": "nbwe06hkm",
+          "title": "촌장과의 대화",
+          "type": "대화",
+          "content": "마을의 촌장이 당신을 맞이합니다. 그는 봉우리의 역사와 신전, 그리고 최근의 타락에 대해 이야기해 줍니다.",
+          "characterIds": [
+            "gd3tysezd"
+          ],
+          "nextSceneId": "gi82gnz37"
+        },
+        {
+          "id": "gi82gnz37",
+          "stageId": "nbwe06hkm",
+          "title": "마을에서의 재정비",
+          "type": "나레이션",
+          "content": "마을에서 휴식을 취하고 장비를 정비했습니다. 촌장에게서 얻은 정보를 바탕으로 신전으로 향할 준비를 마쳤습니다.",
+          "characterIds": [],
+          "nextSceneId": "h3v152fci"
+        },
+        {
+          "id": "h3v152fci",
+          "stageId": "nbwe06hkm",
+          "title": "신전으로 향하는 길",
+          "type": "장소 변경",
+          "content": "마을을 떠나 봉우리 정상에 위치한 신전으로 향하는 길을 다시 오르기 시작합니다. 이제 신전이 멀지 않았습니다.",
+          "characterIds": [],
+          "nextSceneId": "4u36pfp54",
+          "newLocationName": "신전 오르막길"
+        },
+        {
+          "id": "4u36pfp54",
+          "stageId": "nbwe06hkm",
+          "title": "신전 전초 기지",
+          "type": "일반 전투",
+          "content": "신전으로 향하는 길목에 어둠의 세력이 설치한 전초 기지가 있습니다. 타락한 몬스터들이 길을 막고 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "h4lfpzbuj",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "rdnxdvnm5",
+              "arvkm2hyl"
+            ],
+            "reward": "경험치와 소모품"
+          }
+        },
+        {
+          "id": "h4lfpzbuj",
+          "stageId": "nbwe06hkm",
+          "title": "신전 외부 회랑",
+          "type": "장소 변경",
+          "content": "마침내 고대 신전의 외부 회랑에 도착했습니다. 거대한 돌기둥들이 늘어서 있지만, 곳곳에 어둠의 기운이 서려 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "eb54nap0y",
+          "newLocationName": "신전 외부"
+        },
+        {
+          "id": "eb54nap0y",
+          "stageId": "nbwe06hkm",
+          "title": "회랑 경비",
+          "type": "일반 전투",
+          "content": "회랑을 지키는 타락한 봉우리 수호병들이 침입자를 발견하고 공격해 옵니다.",
+          "characterIds": [],
+          "nextSceneId": "w1mh32kqn",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "fhdjwp02f",
+              "fhdjwp02f"
+            ],
+            "reward": "경험치와 봉우리 수호병의 갑옷 조각"
+          }
+        },
+        {
+          "id": "w1mh32kqn",
+          "stageId": "nbwe06hkm",
+          "title": "신전 내부 진입",
+          "type": "장소 변경",
+          "content": "신전의 거대한 문을 열고 내부로 진입합니다. 내부는 어둡고 음침하며, 기이한 마법진들이 바닥에 그려져 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "74pgrzpts",
+          "newLocationName": "신전 내부"
+        },
+        {
+          "id": "74pgrzpts",
+          "stageId": "nbwe06hkm",
+          "title": "신전의 분위기",
+          "type": "나레이션",
+          "content": "신전 내부의 공기는 무겁고 타락한 기운으로 가득합니다. 벽면의 성스러운 문양들은 훼손되어 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "nnsk6nx5b"
+        },
+        {
+          "id": "nnsk6nx5b",
+          "stageId": "nbwe06hkm",
+          "title": "타락한 성직자",
+          "type": "일반 전투",
+          "content": "신전 깊숙한 곳에서 어둠의 힘에 물든 성직자들이 나타나 당신을 공격합니다.",
+          "characterIds": [],
+          "nextSceneId": "g5i5kz831",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "arvkm2hyl",
+              "fhdjwp02f"
+            ],
+            "reward": "경험치와 타락한 성물"
+          }
+        },
+        {
+          "id": "g5i5kz831",
+          "stageId": "nbwe06hkm",
+          "title": "봉인된 지식의 전당",
+          "type": "장소 변경",
+          "content": "신전 내부를 탐색하던 중, 봉인된 듯 보이는 문을 발견하고 열었습니다. 고대의 지식이 보관되었던 전당 같습니다.",
+          "characterIds": [],
+          "nextSceneId": "6c8r8103i",
+          "newLocationName": "지식의 전당"
+        },
+        {
+          "id": "6c8r8103i",
+          "stageId": "nbwe06hkm",
+          "title": "신전 수호자 잔영과의 만남",
+          "type": "대화",
+          "content": "전당 안에서 희미하게 빛나는 존재와 마주칩니다. 그는 타락하기 전 신전의 수호자였습니다.",
+          "characterIds": [
+            "pweq8xi8z"
+          ],
+          "nextSceneId": "icaiqofjo"
+        },
+        {
+          "id": "icaiqofjo",
+          "stageId": "nbwe06hkm",
+          "title": "신전의 비밀을 듣다",
+          "type": "나레이션",
+          "content": "수호자의 잔영으로부터 신전의 진실과 대제사장 카라드의 계획을 알게 되었습니다. 서둘러 정상의 성소로 향해야 합니다.",
+          "characterIds": [],
+          "nextSceneId": "tnk46g48f"
+        },
+        {
+          "id": "tnk46g48f",
+          "stageId": "nbwe06hkm",
+          "title": "정상으로 가는 길목",
+          "type": "장소 변경",
+          "content": "신전 내부의 마지막 통로를 통해 봉우리 정상에 위치한 대제사장의 성소로 향하는 길목에 들어섰습니다. 긴장이 감돕니다.",
+          "characterIds": [],
+          "nextSceneId": "f0ak09loa",
+          "newLocationName": "정상 길목"
+        },
+        {
+          "id": "f0ak09loa",
+          "stageId": "nbwe06hkm",
+          "title": "보스 전 경비",
+          "type": "일반 전투",
+          "content": "정상으로 가는 마지막 길목을 지키는 강력한 타락한 수호병들이 앞을 가로막습니다.",
+          "characterIds": [],
+          "nextSceneId": "38fmbx7k9",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "fhdjwp02f",
+              "arvkm2hyl",
+              "fhdjwp02f"
+            ],
+            "reward": "많은 경험치와 희귀한 재료"
+          }
+        },
+        {
+          "id": "38fmbx7k9",
+          "stageId": "nbwe06hkm",
+          "title": "대제사장의 성소 입구",
+          "type": "장소 변경",
+          "content": "마침내 봉우리 정상에 위치한 성소의 입구에 도착했습니다. 거대한 문 너머에서 강력한 어둠의 기운이 뿜어져 나옵니다.",
+          "characterIds": [],
+          "nextSceneId": "9qe4f8j5x",
+          "newLocationName": "대제사장의 성소"
+        },
+        {
+          "id": "9qe4f8j5x",
+          "stageId": "nbwe06hkm",
+          "title": "최종 결전의 예감",
+          "type": "나레이션",
+          "content": "성소 문 앞에서 심장이 빠르게 뜁니다. 봉우리의 운명이 걸린 마지막 전투가 눈앞에 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "mexbv6psj"
+        },
+        {
+          "id": "mexbv6psj",
+          "stageId": "nbwe06hkm",
+          "title": "타락한 대제사장 카라드",
+          "type": "보스 전투",
+          "content": "성소 안에는 어둠의 힘으로 뒤틀린 대제사장 카라드가 서 있습니다. 봉우리의 타락을 완성하려는 그를 막아야 합니다!",
+          "characterIds": [],
+          "nextSceneId": null,
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "vgiblsv5u"
+            ],
+            "reward": "엄청난 경험치, 영웅 등급 아이템, 봉우리 정화"
+          }
+        }
+      ]
+    },
+    {
+      "id": "27riydx39",
+      "title": "타락한 수정 동굴",
+      "settingDescription": "어둠의 세력이 고대 수정 동굴의 심장부에 숨겨진 강력한 마력원을 타락시키려 합니다. 동굴 깊숙한 곳으로 들어가 타락을 막고 마력원을 정화하세요.",
+      "characters": [
+        {
+          "id": "4qjwbmlxp",
+          "name": "안내자 엘라",
+          "type": "NPC",
+          "description": "수정 동굴 주변 지리에 밝은 정찰병 출신. 어둠의 세력 침입 후 숨어 지내고 있다.",
+          "dialogueSeed": "동굴 안은 위험해요. 특히 깊숙한 곳은..."
+        },
+        {
+          "id": "brnt8vqca",
+          "name": "촌장 가렌",
+          "type": "NPC",
+          "description": "수정 동굴 깊은 곳에 숨겨진 마을의 촌장. 마력 핵과 동굴의 역사를 알고 있다.",
+          "dialogueSeed": "마력 핵이 타락하면 이 동굴 전체, 아니 이 지역 전체가 위험해집니다."
+        },
+        {
+          "id": "edit3cixq",
+          "name": "상인 벨라",
+          "type": "NPC",
+          "description": "숨겨진 마을에서 물건을 파는 상인. 위험한 상황에서도 장사를 포기하지 않는다.",
+          "dialogueSeed": "필요한 물건은 없으신가요? 탐험에는 준비가 중요하죠."
+        },
+        {
+          "id": "lavsav840",
+          "name": "타락한 수정 거미",
+          "type": "일반 몬스터",
+          "description": "타락한 수정의 영향을 받아 공격적으로 변한 거미. 날카로운 다리와 독을 사용한다."
+        },
+        {
+          "id": "ui58tmzxk",
+          "name": "마력 흡수체",
+          "type": "일반 몬스터",
+          "description": "주변의 마력을 빨아들이는 정체불명의 생명체. 마법 공격에 저항력이 강하다."
+        },
+        {
+          "id": "66kome381",
+          "name": "결정 골렘",
+          "type": "일반 몬스터",
+          "description": "타락한 수정 에너지로 움직이는 골렘. 단단한 몸과 강력한 물리 공격을 가한다."
+        },
+        {
+          "id": "agn2hoxw5",
+          "name": "어둠의 사제 제라드",
+          "type": "보스 몬스터",
+          "description": "어둠의 세력 소속의 강력한 마법사. 수정 동굴의 마력 핵을 타락시키는 의식을 주도하고 있다."
+        }
+      ],
+      "scenes": [
+        {
+          "id": "8esnocbo3",
+          "stageId": "27riydx39",
+          "title": "동굴 입구에 서서",
+          "type": "나레이션",
+          "content": "습하고 차가운 공기가 코를 찌른다. 고대 수정 동굴의 입구가 어둠 속에서 거대한 입을 벌리고 있다. 이곳에서 강력한 마력의 기운과 함께 불길한 타락의 기운이 느껴진다. 어둠의 세력이 이미 깊숙이 침투한 모양이다.",
+          "characterIds": [],
+          "nextSceneId": "qrmjisrsj"
+        },
+        {
+          "id": "qrmjisrsj",
+          "stageId": "27riydx39",
+          "title": "첫 번째 마주침",
+          "type": "일반 전투",
+          "content": "동굴 안으로 발을 들여놓자, 천장에서 거대한 거미들이 내려온다. 몸에 푸른 수정 조각이 박힌 채 공격적으로 달려든다.",
+          "characterIds": [],
+          "nextSceneId": "z3t7n9dgg",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "lavsav840"
+            ],
+            "reward": "수정 거미 다리, 약간의 골드"
+          }
+        },
+        {
+          "id": "z3t7n9dgg",
+          "stageId": "27riydx39",
+          "title": "어둠 속 탐색",
+          "type": "나레이션",
+          "content": "거미들을 물리치고 더 깊이 들어간다. 동굴 벽에는 희미하게 빛나는 수정들이 박혀 있지만, 그 빛은 어딘가 병든 듯 탁하다.",
+          "characterIds": [],
+          "nextSceneId": "kjkrtswrl"
+        },
+        {
+          "id": "kjkrtswrl",
+          "stageId": "27riydx39",
+          "title": "갈림길",
+          "type": "갈림길",
+          "content": "앞에 두 개의 통로가 나타난다. 왼쪽은 좁고 불안정해 보이며, 오른쪽은 넓고 희미한 빛이 새어 나온다. 어느 쪽으로 갈까?",
+          "characterIds": [],
+          "nextSceneId": "c9c9kfmpo"
+        },
+        {
+          "id": "c9c9kfmpo",
+          "stageId": "27riydx39",
+          "title": "좁은 통로",
+          "type": "나레이션",
+          "content": "불안정한 바위들이 언제 무너질지 모르는 좁은 통로를 조심스럽게 지나간다. 발소리가 울려퍼져 긴장감을 더한다.",
+          "characterIds": [],
+          "nextSceneId": "38if9tkoj"
+        },
+        {
+          "id": "38if9tkoj",
+          "stageId": "27riydx39",
+          "title": "넓은 동굴",
+          "type": "일반 전투",
+          "content": "넓은 동굴에 들어서자, 바닥과 벽에 박힌 수정들이 기괴하게 꿈틀거린다. 타락한 마력의 기운이 강하게 느껴지며, 그 영향으로 변이된 생명체들이 공격해 온다.",
+          "characterIds": [],
+          "nextSceneId": "cz6v4lzmw",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "lavsav840",
+              "ui58tmzxk"
+            ],
+            "reward": "마력 흡수체의 핵, 약간의 골드"
+          }
+        },
+        {
+          "id": "cz6v4lzmw",
+          "stageId": "27riydx39",
+          "title": "합류 지점",
+          "type": "나레이션",
+          "content": "두 통로는 결국 하나의 넓은 공간에서 다시 만난다. 공기는 더욱 무겁고 차갑다.",
+          "characterIds": [],
+          "nextSceneId": "qlur45hc1"
+        },
+        {
+          "id": "qlur45hc1",
+          "stageId": "27riydx39",
+          "title": "수상한 흔적 발견",
+          "type": "아이템 획득",
+          "content": "바닥에 이상한 문양이 그려져 있고, 그 옆에 작은 주머니가 떨어져 있다. 어둠의 세력이 사용한 것으로 보이는 의식 도구의 일부이다.",
+          "characterIds": [],
+          "nextSceneId": "5nxmuqgjg",
+          "item": "어둠의 의식 조각"
+        },
+        {
+          "id": "5nxmuqgjg",
+          "stageId": "27riydx39",
+          "title": "안내자 엘라와의 만남",
+          "type": "대화",
+          "content": "동굴 깊숙이 가던 중, 바위 뒤에 숨어있던 누군가와 마주친다. 정찰병 출신인 엘라이다. 그녀는 동굴의 위험성과 숨겨진 마을에 대해 경고한다.",
+          "characterIds": [
+            "4qjwbmlxp"
+          ],
+          "nextSceneId": "c08cr7qn1"
+        },
+        {
+          "id": "c08cr7qn1",
+          "stageId": "27riydx39",
+          "title": "엘라와 함께 이동",
+          "type": "나레이션",
+          "content": "엘라의 안내를 받아 동굴의 복잡한 구조를 따라 이동한다. 그녀는 위험한 구간이나 몬스터의 서식지를 알려주며 길을 인도한다.",
+          "characterIds": [],
+          "nextSceneId": "lnf42u7sl"
+        },
+        {
+          "id": "lnf42u7sl",
+          "stageId": "27riydx39",
+          "title": "매복 공격",
+          "type": "일반 전투",
+          "content": "좁은 통로를 지나던 중, 갑자기 천장과 벽에서 마력 흡수체와 결정 골렘이 나타나 매복 공격을 가한다!",
+          "characterIds": [],
+          "nextSceneId": "lwi7g6ilm",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "ui58tmzxk",
+              "66kome381"
+            ],
+            "reward": "단단한 결정 조각, 마력 흡수체의 핵"
+          }
+        },
+        {
+          "id": "lwi7g6ilm",
+          "stageId": "27riydx39",
+          "title": "위험한 수정 지대",
+          "type": "나레이션",
+          "content": "주변의 수정들이 더욱 기괴한 형태로 자라나 있다. 공기 중에는 불안정한 마력이 가득하며, 밟으면 폭발할 것 같은 수정들도 보인다.",
+          "characterIds": [],
+          "nextSceneId": "z2t0vjc7r"
+        },
+        {
+          "id": "z2t0vjc7r",
+          "stageId": "27riydx39",
+          "title": "타락한 마력 생명체",
+          "type": "일반 전투",
+          "content": "이 지대의 불안정한 마력에 영향을 받은 강력한 결정 골렘들이 길을 막고 있다. 이들을 물리쳐야만 전진할 수 있다.",
+          "characterIds": [],
+          "nextSceneId": "hd5p8cijk",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "66kome381"
+            ],
+            "reward": "깨끗한 결정 파편, 골드"
+          }
+        },
+        {
+          "id": "hd5p8cijk",
+          "stageId": "27riydx39",
+          "title": "심연으로 가는 길",
+          "type": "장소 변경",
+          "content": "엘라가 숨겨진 통로를 가리킨다. '이곳으로 내려가야 해요. 마을은 더 깊은 곳에 있어요.'",
+          "characterIds": [],
+          "nextSceneId": "q5wluqyz6",
+          "newLocationName": "동굴 지하 심층부"
+        },
+        {
+          "id": "q5wluqyz6",
+          "stageId": "27riydx39",
+          "title": "지하 폭포",
+          "type": "나레이션",
+          "content": "아래로 내려오자 거대한 지하 폭포 소리가 들린다. 폭포수 주변의 바위들은 오랜 시간 물에 깎여 매끄럽다. 폭포 뒤에 무언가 숨겨져 있는 듯하다.",
+          "characterIds": [],
+          "nextSceneId": "c152g7y2i"
+        },
+        {
+          "id": "c152g7y2i",
+          "stageId": "27riydx39",
+          "title": "숨겨진 통로 발견",
+          "type": "나레이션",
+          "content": "폭포 뒤편을 탐색하자, 교묘하게 가려진 통로 입구가 나타난다. 엘라가 미소지으며 말한다. '이곳이 마을로 가는 길이에요.'",
+          "characterIds": [],
+          "nextSceneId": "twm963st2"
+        },
+        {
+          "id": "twm963st2",
+          "stageId": "27riydx39",
+          "title": "은신처 입구",
+          "type": "나레이션",
+          "content": "숨겨진 통로를 따라가자, 넓은 동굴 안에 자리 잡은 작은 마을이 나타난다. 외부의 위험으로부터 격리된 은신처이다.",
+          "characterIds": [],
+          "nextSceneId": "ueb8uur1e"
+        },
+        {
+          "id": "ueb8uur1e",
+          "stageId": "27riydx39",
+          "title": "수정 동굴 마을",
+          "type": "마을",
+          "content": "고대 수정 동굴 깊숙한 곳에 자리 잡은 작은 마을. 동굴의 위험을 피해 숨어 지내는 사람들이 모여 있다. 이곳에서 재정비하고 정보를 얻을 수 있다.",
+          "characterIds": [],
+          "nextSceneId": "qa8thue1m"
+        },
+        {
+          "id": "qa8thue1m",
+          "stageId": "27riydx39",
+          "title": "촌장 가렌과의 대화",
+          "type": "대화",
+          "content": "마을의 촌장 가렌이 플레이어를 맞이한다. 그는 동굴의 마력 핵과 어둠의 사제 제라드의 계획에 대해 설명하며 도움을 요청한다.",
+          "characterIds": [
+            "brnt8vqca"
+          ],
+          "nextSceneId": "ksh0nh8lc"
+        },
+        {
+          "id": "ksh0nh8lc",
+          "stageId": "27riydx39",
+          "title": "마을에서의 정비",
+          "type": "대화",
+          "content": "마을의 상인 벨라에게서 물약이나 장비를 구매하며 다음 여정을 준비한다.",
+          "characterIds": [
+            "edit3cixq"
+          ],
+          "nextSceneId": "5ry3k8wch"
+        },
+        {
+          "id": "5ry3k8wch",
+          "stageId": "27riydx39",
+          "title": "마을 출구",
+          "type": "나레이션",
+          "content": "마을에서의 정비를 마치고, 마력 핵이 있는 동굴의 가장 깊은 곳으로 향하기 위해 마을을 나선다. 이제 되돌아갈 수는 없다.",
+          "characterIds": [],
+          "nextSceneId": "n1j25zkbv"
+        },
+        {
+          "id": "n1j25zkbv",
+          "stageId": "27riydx39",
+          "title": "핵심부로 향하는 길",
+          "type": "일반 전투",
+          "content": "마력 핵이 가까워질수록 타락의 기운은 더욱 강해진다. 어둠의 세력이 보낸 몬스터들이 길목을 지키고 있다.",
+          "characterIds": [],
+          "nextSceneId": "noa3mo4sc",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "lavsav840",
+              "ui58tmzxk",
+              "66kome381"
+            ],
+            "reward": "다양한 수정 조각, 골드"
+          }
+        },
+        {
+          "id": "noa3mo4sc",
+          "stageId": "27riydx39",
+          "title": "마지막 방어선",
+          "type": "일반 전투",
+          "content": "마력 핵의 방 바로 앞에서 어둠의 사제가 보낸 강력한 수호자들이 최후의 방어선을 구축하고 있다. 이들을 돌파해야 한다.",
+          "characterIds": [],
+          "nextSceneId": "kdhayqhxh",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "66kome381",
+              "ui58tmzxk"
+            ],
+            "reward": "강화된 결정, 희귀한 마력 흡수체의 핵"
+          }
+        },
+        {
+          "id": "kdhayqhxh",
+          "stageId": "27riydx39",
+          "title": "마력 핵의 방 입구",
+          "type": "장소 변경",
+          "content": "마지막 방어선을 뚫고 마력 핵의 방 입구에 도달한다. 거대한 문 너머에서 강력하고 불길한 마력이 느껴진다.",
+          "characterIds": [],
+          "nextSceneId": "x3uumgzva",
+          "newLocationName": "마력 핵의 방"
+        },
+        {
+          "id": "x3uumgzva",
+          "stageId": "27riydx39",
+          "title": "타락한 마력 핵",
+          "type": "나레이션",
+          "content": "방 안으로 들어서자, 거대한 수정 형태의 마력 핵이 중앙에 자리 잡고 있다. 하지만 그 순수한 빛은 검은 기운에 뒤덮여 탁하게 빛나고 있다. 그 옆에는 어둠의 사제 제라드가 서서 타락 의식을 진행하고 있다.",
+          "characterIds": [],
+          "nextSceneId": "5zvz172rw"
+        },
+        {
+          "id": "5zvz172rw",
+          "stageId": "27riydx39",
+          "title": "보스 전투: 어둠의 사제 제라드",
+          "type": "보스 전투",
+          "content": "어둠의 사제 제라드가 플레이어의 등장에 의식을 멈추고 돌아선다. '감히 방해하려 들다니! 이 마력 핵은 이제 어둠의 힘으로 다시 태어날 것이다!' 제라드가 강력한 어둠 마법을 사용하며 공격해 온다. 마력 핵의 타락을 막기 위해 제라드를 물리쳐야 한다!",
+          "characterIds": [],
+          "nextSceneId": null,
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "agn2hoxw5"
+            ],
+            "reward": "어둠의 사제 제라드의 지팡이, 마력 핵 정화의 실마리, 대량의 골드"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ychu3ju0p",
+      "title": "저주받은 고대 도시의 심연",
+      "settingDescription": "오래전 금지된 마법으로 멸망한 고대 도시. 지금은 어둠의 세력이 이곳의 저주받은 힘을 탐내며 점거하고 있습니다. 도시의 심연으로 들어가 타락의 근원을 막아야 합니다.",
+      "characters": [
+        {
+          "id": "6u2jwm7s3",
+          "name": "노학자 엘라",
+          "type": "NPC",
+          "description": "저주받은 고대 도시 외곽에 숨어 사는 지혜로운 노인. 도시에 대한 깊은 지식을 가지고 있습니다.",
+          "dialogueSeed": "이 도시는 위험하오. 하지만 자네 같은 용감한 모험가라면... 조심하게, 심연은 모든 것을 집어삼키지."
+        },
+        {
+          "id": "8c2jmi3qw",
+          "name": "상인 카라",
+          "type": "NPC",
+          "description": "고대 도시 근처의 작은 마을 '안식처'에서 상점을 운영하는 활기찬 여성. 모험가들에게 필요한 물품을 판매합니다.",
+          "dialogueSeed": "어서 오세요! 필요한 물건이라도? 이 위험한 곳에서 살아남으려면 준비가 철저해야죠!"
+        },
+        {
+          "id": "dct5vouv5",
+          "name": "치유사 미리암",
+          "type": "NPC",
+          "description": "'안식처' 마을의 치유사. 상처를 치료하고 도시의 저주에 대한 정보를 조금 알고 있습니다.",
+          "dialogueSeed": "몸은 괜찮으신가요? 도시의 저주는 육체뿐 아니라 정신까지 타락시킵니다. 조심하세요."
+        },
+        {
+          "id": "hiizvoclg",
+          "name": "타락한 도시 수호병",
+          "type": "일반 몬스터",
+          "description": "고대 도시의 저주에 의해 되살아난 병사들. 생전의 임무대로 도시를 지키려 하지만, 이미 이성은 없습니다."
+        },
+        {
+          "id": "px3o9fsvx",
+          "name": "그림자 괴물",
+          "type": "일반 몬스터",
+          "description": "도시의 어둠과 절망이 형상화된 존재. 물리적인 공격보다 마법적인 힘에 취약합니다."
+        },
+        {
+          "id": "wx2uaswzk",
+          "name": "저주받은 학자",
+          "type": "일반 몬스터",
+          "description": "금지된 지식을 탐하다 타락한 마법사. 강력한 저주 마법을 사용합니다."
+        },
+        {
+          "id": "xrly7unt6",
+          "name": "심연의 수호자",
+          "type": "일반 몬스터",
+          "description": "보스에게 충성하는 정예 병사. 강력한 방어력과 공격력을 지녔습니다."
+        },
+        {
+          "id": "fptck62oc",
+          "name": "심연의 지배자 벨리알",
+          "type": "보스 몬스터",
+          "description": "저주받은 고대 도시의 심연에 자리 잡은 어둠의 세력 지도자. 도시의 저주받은 힘을 완전히 장악하려 합니다. 강력한 어둠 마법과 광역 공격을 사용합니다."
+        }
+      ],
+      "scenes": [
+        {
+          "id": "2fodvdxoh",
+          "stageId": "ychu3ju0p",
+          "title": "저주받은 도시 외곽",
+          "type": "나레이션",
+          "content": "오랜 세월 동안 잊혀졌던 고대 도시의 폐허 앞에 섰습니다. 음침한 기운이 느껴지며, 도시로 향하는 길은 황폐합니다. 이곳에서 저주받은 힘이 새어 나오고 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "gqz5sn4k0"
+        },
+        {
+          "id": "gqz5sn4k0",
+          "stageId": "ychu3ju0p",
+          "title": "노학자 엘라와의 만남",
+          "type": "대화",
+          "content": "폐허 입구 근처에서 한 노인을 만났습니다. 도시를 오랫동안 지켜봐 온 듯한 그는 당신에게 경고의 말을 건넵니다.",
+          "characterIds": [
+            "6u2jwm7s3"
+          ],
+          "nextSceneId": "4gd5wmjtd"
+        },
+        {
+          "id": "4gd5wmjtd",
+          "stageId": "ychu3ju0p",
+          "title": "저주받은 도시 외곽 진입",
+          "type": "장소 변경",
+          "content": "노인의 경고를 뒤로하고, 무너진 성벽의 틈을 통해 도시 외곽 폐허 안으로 발을 들입니다.",
+          "characterIds": [],
+          "nextSceneId": "62ta3jlvp",
+          "newLocationName": "엘드리아 도시 외곽 폐허"
+        },
+        {
+          "id": "62ta3jlvp",
+          "stageId": "ychu3ju0p",
+          "title": "황폐한 거리",
+          "type": "나레이션",
+          "content": "도시 외곽의 거리는 폐허가 되어 있습니다. 부서진 건물 잔해와 기괴하게 변형된 식물들이 가득합니다. 정적이 감돌지만, 어딘가에서 위험이 도사리고 있는 듯합니다.",
+          "characterIds": [],
+          "nextSceneId": "4mcfrn2ng"
+        },
+        {
+          "id": "4mcfrn2ng",
+          "stageId": "ychu3ju0p",
+          "title": "첫 번째 저항",
+          "type": "일반 전투",
+          "content": "폐허를 탐색하던 중, 도시의 저주에 물든 옛 수호병들이 나타나 공격해 옵니다.",
+          "characterIds": [],
+          "nextSceneId": "kl8f035ye",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "hiizvoclg",
+              "hiizvoclg"
+            ],
+            "reward": "낡은 동전 몇 개, 낮은 등급 회복 물약"
+          }
+        },
+        {
+          "id": "kl8f035ye",
+          "stageId": "ychu3ju0p",
+          "title": "숨겨진 통로 발견",
+          "type": "나레이션",
+          "content": "전투 후, 부서진 건물 뒤에서 잘 눈에 띄지 않는 통로를 발견했습니다. 이 통로는 어디로 이어질까요?",
+          "characterIds": [],
+          "nextSceneId": "gw3b81vp7"
+        },
+        {
+          "id": "gw3b81vp7",
+          "stageId": "ychu3ju0p",
+          "title": "숨겨진 마을 '안식처'로",
+          "type": "장소 변경",
+          "content": "숨겨진 통로를 따라가자, 폐허 속에 감춰진 작은 마을이 나타났습니다. 이곳이 노학자 엘라가 말한 안전한 장소일까요?",
+          "characterIds": [],
+          "nextSceneId": "dxpf2cpxy",
+          "newLocationName": "안식처 마을"
+        },
+        {
+          "id": "dxpf2cpxy",
+          "stageId": "ychu3ju0p",
+          "title": "안식처 마을",
+          "type": "마을",
+          "content": "저주받은 도시 근처에 자리한 작은 마을 '안식처'에 도착했습니다. 이곳에서 잠시 숨을 고르고 재정비할 수 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "4knj4iio3"
+        },
+        {
+          "id": "4knj4iio3",
+          "stageId": "ychu3ju0p",
+          "title": "상인과의 거래",
+          "type": "대화",
+          "content": "'안식처' 마을의 상인에게서 필요한 물품을 구매할 수 있습니다.",
+          "characterIds": [
+            "8c2jmi3qw"
+          ],
+          "nextSceneId": "l2bw8nsgl"
+        },
+        {
+          "id": "l2bw8nsgl",
+          "stageId": "ychu3ju0p",
+          "title": "치유사의 조언",
+          "type": "대화",
+          "content": "마을의 치유사는 당신의 상처를 치료해주고 도시의 저주에 대해 이야기해줍니다.",
+          "characterIds": [
+            "dct5vouv5"
+          ],
+          "nextSceneId": "zrnto4wrl"
+        },
+        {
+          "id": "zrnto4wrl",
+          "stageId": "ychu3ju0p",
+          "title": "도시 중앙 구역 진입",
+          "type": "장소 변경",
+          "content": "재정비를 마치고 '안식처'를 떠나 도시의 중앙 구역으로 향하는 길을 발견했습니다.",
+          "characterIds": [],
+          "nextSceneId": "g2v8rn0i2",
+          "newLocationName": "엘드리아 도시 중앙 구역"
+        },
+        {
+          "id": "g2v8rn0i2",
+          "stageId": "ychu3ju0p",
+          "title": "중앙 구역의 타락",
+          "type": "나레이션",
+          "content": "도시 중앙 구역은 외곽보다 훨씬 더 타락한 모습입니다. 건물들은 뒤틀리고, 어둠의 기운이 더욱 강하게 느껴집니다.",
+          "characterIds": [],
+          "nextSceneId": "ffahglugd"
+        },
+        {
+          "id": "ffahglugd",
+          "stageId": "ychu3ju0p",
+          "title": "어둠의 존재들",
+          "type": "일반 전투",
+          "content": "중앙 구역을 지나가던 중, 그림자처럼 움직이는 존재들이 나타나 공격해 옵니다.",
+          "characterIds": [],
+          "nextSceneId": "96q2win77",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "px3o9fsvx",
+              "hiizvoclg",
+              "px3o9fsvx"
+            ],
+            "reward": "어둠의 파편, 약간의 동전"
+          }
+        },
+        {
+          "id": "96q2win77",
+          "stageId": "ychu3ju0p",
+          "title": "오래된 기록 조각",
+          "type": "아이템 획득",
+          "content": "부서진 분수대 근처에서 방치된 오래된 기록 조각을 발견했습니다. 고대 도시의 멸망과 관련된 내용인 듯합니다.",
+          "characterIds": [],
+          "nextSceneId": "krs97hdlx",
+          "item": "엘드리아 기록 조각 (파편화됨)"
+        },
+        {
+          "id": "krs97hdlx",
+          "stageId": "ychu3ju0p",
+          "title": "고대 도서관 유적",
+          "type": "장소 변경",
+          "content": "기록 조각에 언급된 장소를 따라가자, 거대한 도서관의 폐허가 나타났습니다. 책들은 모두 썩거나 불타버렸지만, 여전히 마법의 기운이 감돕니다.",
+          "characterIds": [],
+          "nextSceneId": "kbzof9knt",
+          "newLocationName": "엘드리아 고대 도서관 유적"
+        },
+        {
+          "id": "kbzof9knt",
+          "stageId": "ychu3ju0p",
+          "title": "금지된 지식의 흔적",
+          "type": "나레이션",
+          "content": "도서관 안은 먼지와 곰팡이 냄새로 가득합니다. 금지된 마법 실험의 흔적들이 곳곳에 남아있습니다.",
+          "characterIds": [],
+          "nextSceneId": "yb8u6jdcn"
+        },
+        {
+          "id": "yb8u6jdcn",
+          "stageId": "ychu3ju0p",
+          "title": "지식의 수호자?",
+          "type": "일반 전투",
+          "content": "도서관 깊은 곳으로 들어가자, 타락한 학자들과 마법으로 움직이는 구조물들이 길을 막습니다.",
+          "characterIds": [],
+          "nextSceneId": "61piacek9",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "wx2uaswzk",
+              "wx2uaswzk",
+              "hiizvoclg"
+            ],
+            "reward": "마력 깃든 종이 조각, 동전"
+          }
+        },
+        {
+          "id": "61piacek9",
+          "stageId": "ychu3ju0p",
+          "title": "숨겨진 서재",
+          "type": "선택",
+          "content": "도서관 유적 깊은 곳에서 잠겨있는 서재를 발견했습니다. 강력한 저주가 느껴집니다. 문을 부수고 들어갈까요, 아니면 우회할 방법을 찾을까요?",
+          "characterIds": [],
+          "choices": [
+            {
+              "id": "56yhoft9v",
+              "text": "저주를 무릅쓰고 문을 부순다.",
+              "nextSceneId": "xg94c62ai"
+            },
+            {
+              "id": "y536shpn4",
+              "text": "다른 길을 찾아 우회한다.",
+              "nextSceneId": "rsl857rpn"
+            }
+          ]
+        },
+        {
+          "id": "xg94c62ai",
+          "stageId": "ychu3ju0p",
+          "title": "저주받은 서재 내부",
+          "type": "장소 변경",
+          "content": "강력한 저주에 시달리며 문을 부수고 서재 안으로 진입했습니다. 오래된 책들이 가득하지만, 그 내용은 모두 금지된 것입니다.",
+          "characterIds": [],
+          "nextSceneId": "afye0eivx",
+          "newLocationName": "엘드리아 저주받은 서재"
+        },
+        {
+          "id": "afye0eivx",
+          "stageId": "ychu3ju0p",
+          "title": "금지된 기록 발견",
+          "type": "아이템 획득",
+          "content": "서재 가장 안쪽에서 어둠의 세력이 찾고 있는 금지된 마법에 대한 기록을 발견했습니다. 이 기록이 그들의 목표일까요?",
+          "characterIds": [],
+          "nextSceneId": "aeu1w4gpg",
+          "item": "금지된 마법 기록"
+        },
+        {
+          "id": "aeu1w4gpg",
+          "stageId": "ychu3ju0p",
+          "title": "기록의 수호자",
+          "type": "일반 전투",
+          "content": "기록을 손에 넣자, 서재에 숨어있던 강력한 수호자가 모습을 드러냅니다.",
+          "characterIds": [],
+          "nextSceneId": "rsl857rpn",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "xrly7unt6"
+            ],
+            "reward": "심연의 파편, 고급 물약"
+          }
+        },
+        {
+          "id": "rsl857rpn",
+          "stageId": "ychu3ju0p",
+          "title": "도서관 지하 통로 입구",
+          "type": "장소 변경",
+          "content": "도서관 유적의 구석에서 지하로 이어지는 어둡고 좁은 통로를 발견했습니다. 이 통로가 도시의 '심연'으로 향하는 길일까요?",
+          "characterIds": [],
+          "nextSceneId": "vtjlcz4m3",
+          "newLocationName": "엘드리아 도서관 지하 통로"
+        },
+        {
+          "id": "vtjlcz4m3",
+          "stageId": "ychu3ju0p",
+          "title": "지하 통로 탐색",
+          "type": "나레이션",
+          "content": "지하 통로는 습하고 어둡습니다. 기분 나쁜 소리가 들려오고, 공기는 점점 차가워집니다.",
+          "characterIds": [],
+          "nextSceneId": "rgwo3caj5"
+        },
+        {
+          "id": "rgwo3caj5",
+          "stageId": "ychu3ju0p",
+          "title": "지하의 거주자",
+          "type": "일반 전투",
+          "content": "통로를 따라가던 중, 지하에 서식하는 변형된 생명체들과 마주칩니다.",
+          "characterIds": [],
+          "nextSceneId": "5sphoigm2",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "px3o9fsvx",
+              "hiizvoclg"
+            ],
+            "reward": "축축한 가죽, 동전"
+          }
+        },
+        {
+          "id": "5sphoigm2",
+          "stageId": "ychu3ju0p",
+          "title": "오래된 장신구",
+          "type": "아이템 획득",
+          "content": "통로 구석의 해골 잔해 옆에서 도시 문양이 새겨진 오래된 장신구를 발견했습니다. 별다른 힘은 느껴지지 않지만, 과거의 유물입니다.",
+          "characterIds": [],
+          "nextSceneId": "kxa7zu4vm",
+          "item": "엘드리아 시민의 장신구"
+        },
+        {
+          "id": "kxa7zu4vm",
+          "stageId": "ychu3ju0p",
+          "title": "심연의 전당 입구",
+          "type": "장소 변경",
+          "content": "지하 통로의 끝에 다다르자, 거대한 동굴 같은 공간이 나타났습니다. 이곳이야말로 도시의 '심연'이라 불리는 곳인 듯합니다. 강력하고 불길한 기운이 느껴집니다.",
+          "characterIds": [],
+          "nextSceneId": "lrah6tj79",
+          "newLocationName": "엘드리아 심연의 전당"
+        },
+        {
+          "id": "lrah6tj79",
+          "stageId": "ychu3ju0p",
+          "title": "어둠의 기운",
+          "type": "나레이션",
+          "content": "심연의 전당은 끝없이 펼쳐진 어둠 속 공간입니다. 저 멀리 불길한 제단과 함께 어둠의 기운이 뭉쳐있는 것이 보입니다. 보스가 저곳에 있을 것입니다.",
+          "characterIds": [],
+          "nextSceneId": "a5i2x473f"
+        },
+        {
+          "id": "a5i2x473f",
+          "stageId": "ychu3ju0p",
+          "title": "최후의 수호자들",
+          "type": "일반 전투",
+          "content": "보스가 있는 곳으로 향하려는 당신을 막기 위해, 어둠의 세력의 정예 수호병들이 나타납니다.",
+          "characterIds": [],
+          "nextSceneId": "wdlo8g9cp",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "xrly7unt6",
+              "xrly7unt6",
+              "px3o9fsvx"
+            ],
+            "reward": "심연의 결정, 고대 유물 조각"
+          }
+        },
+        {
+          "id": "wdlo8g9cp",
+          "stageId": "ychu3ju0p",
+          "title": "심연의 지배자 처소",
+          "type": "장소 변경",
+          "content": "최후의 수호자들을 물리치고, 심연의 가장 깊은 곳에 있는 보스의 처소로 진입했습니다.",
+          "characterIds": [],
+          "nextSceneId": "no37j040y",
+          "newLocationName": "심연의 지배자 처소"
+        },
+        {
+          "id": "no37j040y",
+          "stageId": "ychu3ju0p",
+          "title": "심연의 지배자 등장",
+          "type": "나레이션",
+          "content": "어둠의 제단 앞에서 강력한 기운을 내뿜는 존재가 당신을 기다리고 있습니다. 저자가 바로 이 저주받은 도시의 심연을 지배하는 자입니다.",
+          "characterIds": [],
+          "nextSceneId": "7xn5tpic0"
+        },
+        {
+          "id": "7xn5tpic0",
+          "stageId": "ychu3ju0p",
+          "title": "심연의 지배자 벨리알",
+          "type": "보스 전투",
+          "content": "저주받은 고대 도시 엘드리아의 심연을 타락시킨 어둠의 지배자, 벨리알과의 최후의 전투입니다. 도시의 저주받은 힘과 어둠의 마법을 사용하여 당신을 쓰러뜨리려 합니다. 그를 물리치고 도시의 타락을 막아야 합니다!",
+          "characterIds": [],
+          "nextSceneId": null,
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "fptck62oc"
+            ],
+            "reward": "엘드리아의 정수, 강력한 마법 유물, 대량의 경험치와 동전"
+          }
+        }
+      ]
+    },
+    {
+      "id": "55xcitxgl",
+      "title": "어둠의 심장부: 종말",
+      "settingDescription": "잃어버린 마법 유물을 모두 손에 넣은 어둠의 군주가 기다리는 심장부. 이곳에서 모든 역사가 결정된다.",
+      "characters": [
+        {
+          "id": "mmlb73itd",
+          "name": "모험가 (플레이어)",
+          "type": "플레이어 캐릭터",
+          "description": "마지막 여정을 떠나는 용감한 모험가. 어둠의 군주를 막고 세계를 구원해야 합니다."
+        },
+        {
+          "id": "4fltcxu40",
+          "name": "현자 엘라라",
+          "type": "NPC",
+          "description": "오래된 지식을 지닌 현자. 마지막 전투를 앞둔 모험가에게 조언과 격려를 해줍니다.",
+          "dialogueSeed": "어둠의 군주는 강력하지만, 유물을 악용하는 그의 힘에는 약점이 있을 겁니다. 용기를 잃지 마세요."
+        },
+        {
+          "id": "osglqx36t",
+          "name": "상인 칼",
+          "type": "NPC",
+          "description": "어둠의 심장부 입구 근처에 임시로 마을을 차린 용감한 상인. 모험가에게 필요한 물품을 판매합니다.",
+          "dialogueSeed": "여기까지 오느라 고생 많으셨습니다. 마지막 전투를 위해 필요한 물건은 없으신가요?"
+        },
+        {
+          "id": "pq6i8sr3d",
+          "name": "고대 수호병",
+          "type": "일반 몬스터",
+          "description": "어둠의 군주가 던전 깊숙한 곳에 배치한 고대의 기계 병사. 강력한 물리 공격을 사용합니다."
+        },
+        {
+          "id": "8ihjna7o5",
+          "name": "그림자 마법사",
+          "type": "일반 몬스터",
+          "description": "어둠의 마법으로 공격하는 몬스터. 환영을 만들어내거나 저주를 겁니다."
+        },
+        {
+          "id": "fjervuwmv",
+          "name": "타락한 정령",
+          "type": "일반 몬스터",
+          "description": "어둠에 오염된 자연 정령. 특정 속성 마법에 강하고 약한 면을 보입니다."
+        },
+        {
+          "id": "ybt4y3u7h",
+          "name": "어둠의 군주 제라칸",
+          "type": "보스 몬스터",
+          "description": "잊혀진 마법 유물의 힘을 모두 흡수한 최종 보스. 세계를 어둠으로 뒤덮으려 합니다. 강력한 마법과 물리 공격을 모두 사용합니다."
+        }
+      ],
+      "scenes": [
+        {
+          "id": "invdptvvo",
+          "stageId": "55xcitxgl",
+          "title": "최후의 여정 시작",
+          "type": "나레이션",
+          "content": "마침내 어둠의 군주 '제라칸'이 숨어 있는 '어둠의 심장부' 입구에 도착했습니다. 이곳을 지나면 되돌아올 수 없습니다. 마지막 전투를 준비하세요.",
+          "characterIds": [],
+          "nextSceneId": "8huwcauvu"
+        },
+        {
+          "id": "8huwcauvu",
+          "stageId": "55xcitxgl",
+          "title": "심장부 입성",
+          "type": "장소 변경",
+          "content": "웅장하고 불길한 기운이 감도는 거대한 문을 열고 안으로 들어섭니다. 차가운 공기가 피부를 스칩니다.",
+          "characterIds": [],
+          "nextSceneId": "quy00l56i",
+          "newLocationName": "어둠의 심장부 전초 기지"
+        },
+        {
+          "id": "quy00l56i",
+          "stageId": "55xcitxgl",
+          "title": "전초 기지 탐색",
+          "type": "나레이션",
+          "content": "전초 기지는 버려진 듯 보이지만, 곳곳에 어둠의 기운이 서려 있습니다. 경계를 늦추지 마세요.",
+          "characterIds": [],
+          "nextSceneId": "lmz5vft1l"
+        },
+        {
+          "id": "lmz5vft1l",
+          "stageId": "55xcitxgl",
+          "title": "첫 번째 저항",
+          "type": "일반 전투",
+          "content": "심장부 깊숙한 곳으로 향하는 길목에서 고대 수호병들과 그림자 마법사들이 나타나 길을 막습니다.",
+          "characterIds": [],
+          "nextSceneId": "iy8vzg8sr",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "pq6i8sr3d",
+              "8ihjna7o5"
+            ],
+            "reward": "골드 500, 체력 포션(중) 2개"
+          }
+        },
+        {
+          "id": "iy8vzg8sr",
+          "stageId": "55xcitxgl",
+          "title": "심장부의 구조",
+          "type": "나레이션",
+          "content": "전초 기지를 지나니 복잡한 통로들이 나타납니다. 지도 없이는 길을 잃기 쉽습니다.",
+          "characterIds": [],
+          "nextSceneId": "2cnhy96si"
+        },
+        {
+          "id": "2cnhy96si",
+          "stageId": "55xcitxgl",
+          "title": "갈림길",
+          "type": "선택",
+          "content": "앞에 두 갈래 길이 있습니다. 왼쪽 길은 어둡고 좁으며, 오른쪽 길은 넓지만 기분 나쁜 기운이 느껴집니다.",
+          "characterIds": [],
+          "choices": [
+            {
+              "id": "ehnlwoe2b",
+              "text": "왼쪽의 좁고 어두운 길로 간다.",
+              "nextSceneId": "w3ejd25nc"
+            },
+            {
+              "id": "vvqv7jvmt",
+              "text": "오른쪽의 넓은 길로 간다.",
+              "nextSceneId": "usfge2ogq"
+            }
+          ]
+        },
+        {
+          "id": "w3ejd25nc",
+          "stageId": "55xcitxgl",
+          "title": "숨겨진 통로",
+          "type": "장소 변경",
+          "content": "좁은 통로를 지나니 예상치 못한 곳으로 연결됩니다. 버려진 보급품 상자가 보입니다.",
+          "characterIds": [],
+          "nextSceneId": "wv6ivjy6d",
+          "newLocationName": "심장부 외곽 보급로"
+        },
+        {
+          "id": "wv6ivjy6d",
+          "stageId": "55xcitxgl",
+          "title": "버려진 보급품",
+          "type": "아이템 획득",
+          "content": "상자를 열어보니 유용한 물건들이 들어있습니다.",
+          "characterIds": [],
+          "nextSceneId": "usfge2ogq",
+          "item": "마나 포션(대) 1개"
+        },
+        {
+          "id": "usfge2ogq",
+          "stageId": "55xcitxgl",
+          "title": "타락한 정령의 숲",
+          "type": "장소 변경",
+          "content": "넓은 길로 들어서자 어둠에 물든 기괴한 숲이 나타납니다. 타락한 정령들이 곳곳에 숨어 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "u5bdfbt5d",
+          "newLocationName": "심장부 외곽 타락한 숲"
+        },
+        {
+          "id": "u5bdfbt5d",
+          "stageId": "55xcitxgl",
+          "title": "숲의 수호자들",
+          "type": "일반 전투",
+          "content": "숲을 지나가려 하자 타락한 정령들이 공격해 옵니다.",
+          "characterIds": [],
+          "nextSceneId": "bi48jb7vz",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "fjervuwmv",
+              "fjervuwmv"
+            ],
+            "reward": "골드 700, 타락한 정수 1개"
+          }
+        },
+        {
+          "id": "bi48jb7vz",
+          "stageId": "55xcitxgl",
+          "title": "심장부 깊숙한 곳으로",
+          "type": "나레이션",
+          "content": "어느 길로 왔든 결국 심장부의 더 깊은 곳으로 연결됩니다. 제라칸의 힘이 점점 강하게 느껴집니다.",
+          "characterIds": [],
+          "nextSceneId": "4hso7z342"
+        },
+        {
+          "id": "4hso7z342",
+          "stageId": "55xcitxgl",
+          "title": "지하 감옥 통로",
+          "type": "장소 변경",
+          "content": "통로를 따라가니 지하 감옥처럼 보이는 곳이 나타납니다. 쇠창살 너머로 희미한 움직임이 보입니다.",
+          "characterIds": [],
+          "nextSceneId": "9oe3gn804",
+          "newLocationName": "심장부 지하 감옥"
+        },
+        {
+          "id": "9oe3gn804",
+          "stageId": "55xcitxgl",
+          "title": "갇힌 현자",
+          "type": "대화",
+          "content": "감옥 안에 갇혀 있던 '현자 엘라라'를 발견했습니다. 그녀는 제라칸에게 잡혀 있었던 것 같습니다.",
+          "characterIds": [
+            "4fltcxu40"
+          ],
+          "nextSceneId": "qb0xo489h"
+        },
+        {
+          "id": "qb0xo489h",
+          "stageId": "55xcitxgl",
+          "title": "엘라라의 지도",
+          "type": "아이템 획득",
+          "content": "현자 엘라라로부터 심장부의 상세한 구조가 그려진 지도를 획득했습니다.",
+          "characterIds": [],
+          "nextSceneId": "wdcc18x8k",
+          "item": "심장부 지도"
+        },
+        {
+          "id": "wdcc18x8k",
+          "stageId": "55xcitxgl",
+          "title": "지도를 따라",
+          "type": "나레이션",
+          "content": "엘라라가 준 지도를 보니 제라칸의 은신처로 가는 가장 빠른 길이 보입니다. 하지만 강력한 수호자들이 지키고 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "ws12f9128"
+        },
+        {
+          "id": "ws12f9128",
+          "stageId": "55xcitxgl",
+          "title": "수호병들의 맹공",
+          "type": "일반 전투",
+          "content": "지도에 표시된 중요 경로를 따라가자, 더욱 강력해진 고대 수호병들과 그림자 마법사들이 대규모로 나타납니다.",
+          "characterIds": [],
+          "nextSceneId": "rjv0e40k2",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "pq6i8sr3d",
+              "pq6i8sr3d",
+              "8ihjna7o5"
+            ],
+            "reward": "골드 1000, 고급 회복 물약 1개"
+          }
+        },
+        {
+          "id": "rjv0e40k2",
+          "stageId": "55xcitxgl",
+          "title": "중앙 통로",
+          "type": "장소 변경",
+          "content": "수호병들을 물리치고 중앙 통로로 진입합니다. 통로 끝에서 희미한 빛이 새어 나옵니다.",
+          "characterIds": [],
+          "nextSceneId": "d0ztu3n6k",
+          "newLocationName": "어둠의 심장부 중앙 통로"
+        },
+        {
+          "id": "d0ztu3n6k",
+          "stageId": "55xcitxgl",
+          "title": "잠깐의 휴식",
+          "type": "나레이션",
+          "content": "중앙 통로 한쪽에 간이 야영지가 마련되어 있습니다. 마지막 전투를 앞두고 재정비할 수 있는 기회입니다.",
+          "characterIds": [],
+          "nextSceneId": "k6pu9z6u9"
+        },
+        {
+          "id": "k6pu9z6u9",
+          "stageId": "55xcitxgl",
+          "title": "임시 야영지",
+          "type": "마을",
+          "content": "심장부 깊숙한 곳에 마련된 임시 야영지입니다. 여기서 필요한 물품을 구매하거나 정비를 할 수 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "dzvwvsl8w"
+        },
+        {
+          "id": "dzvwvsl8w",
+          "stageId": "55xcitxgl",
+          "title": "상인과의 거래",
+          "type": "대화",
+          "content": "야영지에 있는 상인 '칼'에게 말을 걸어 물품을 구매합니다.",
+          "characterIds": [
+            "osglqx36t"
+          ],
+          "nextSceneId": "rpbt1yue4"
+        },
+        {
+          "id": "rpbt1yue4",
+          "stageId": "55xcitxgl",
+          "title": "결전의 시간",
+          "type": "나레이션",
+          "content": "재정비를 마쳤습니다. 이제 제라칸이 있는 곳으로 향할 시간입니다.",
+          "characterIds": [],
+          "nextSceneId": "9wau6vodf"
+        },
+        {
+          "id": "9wau6vodf",
+          "stageId": "55xcitxgl",
+          "title": "어둠의 왕좌로",
+          "type": "장소 변경",
+          "content": "야영지를 떠나 중앙 통로의 끝에 있는 거대한 문으로 향합니다. 문 너머에서 엄청난 마력이 느껴집니다.",
+          "characterIds": [],
+          "nextSceneId": "uau4kmhyg",
+          "newLocationName": "제라칸의 왕좌실 앞"
+        },
+        {
+          "id": "uau4kmhyg",
+          "stageId": "55xcitxgl",
+          "title": "마지막 문",
+          "type": "나레이션",
+          "content": "어둠의 군주 제라칸이 기다리는 마지막 문 앞에 섰습니다. 심호흡을 하고 결의를 다집니다.",
+          "characterIds": [],
+          "nextSceneId": "ql83fqlo7"
+        },
+        {
+          "id": "ql83fqlo7",
+          "stageId": "55xcitxgl",
+          "title": "어둠의 왕좌실",
+          "type": "장소 변경",
+          "content": "문을 열고 들어서자, 잊혀진 유물들의 힘에 둘러싸인 어둠의 군주 제라칸이 왕좌에 앉아 기다리고 있습니다.",
+          "characterIds": [],
+          "nextSceneId": "im8dhfavo",
+          "newLocationName": "어둠의 군주 제라칸의 왕좌실"
+        },
+        {
+          "id": "im8dhfavo",
+          "stageId": "55xcitxgl",
+          "title": "제라칸의 조롱",
+          "type": "대화",
+          "content": "제라칸이 일어나 모험가를 내려다보며 조롱합니다.",
+          "characterIds": [],
+          "nextSceneId": "vbp4khmid"
+        },
+        {
+          "id": "vbp4khmid",
+          "stageId": "55xcitxgl",
+          "title": "최후의 대결",
+          "type": "나레이션",
+          "content": "제라칸과의 대화는 통하지 않습니다. 세계의 운명을 건 최후의 전투가 시작됩니다!",
+          "characterIds": [],
+          "nextSceneId": "9r9nolzw3"
+        },
+        {
+          "id": "9r9nolzw3",
+          "stageId": "55xcitxgl",
+          "title": "어둠의 군주 제라칸",
+          "type": "보스 전투",
+          "content": "잊혀진 유물의 힘을 모두 흡수한 어둠의 군주 제라칸과의 마지막 전투입니다. 그의 강력한 마법과 공격을 피하며 약점을 찾아 쓰러뜨리세요!",
+          "characterIds": [],
+          "nextSceneId": "06e6wii5o",
+          "combatDetails": {
+            "enemyCharacterIds": [
+              "ybt4y3u7h"
+            ],
+            "reward": "세계의 구원, 경험치 대량, 전설 등급 아이템"
+          }
+        },
+        {
+          "id": "06e6wii5o",
+          "stageId": "55xcitxgl",
+          "type": "나레이션",
+          "title": "어둠을 넘어선 세계",
+          "content": "어둠의 군주 제라칸이 쓰러지고, 빼앗겼던 마법 유물들이 제자리를 찾았습니다. 고대에 드리웠던 그림자가 걷히고, 비로소 평화로운 시대가 도래했습니다. 모험가의 용맹함이 세계를 구원했습니다.",
+          "characterIds": [],
+          "nextSceneId": null
+        }
+      ]
+    }
+  ]
+}
